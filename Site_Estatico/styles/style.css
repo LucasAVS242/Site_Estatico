@@ -1,14 +1,17 @@
 .map {
-    padding-bottom: 50%;
+    padding-bottom: 75%;
     position: relative;
+    
 }
 
 .map iframe {
-    height: 60%;
-    width: 50%;
+    height:100%;
+    width: 100%;
     left: 0;
     top: 0;
+    
     position: absolute;
+    
 }
 @font-face{
     font-family:Lato;
@@ -22,3 +25,12 @@
 footer{
     background-color: #3cab7b;
 }
+
+h1,h2{
+    font-weight: bold;
+    padding: 5px;
+    padding-left: 7%;
+}
+
+
+

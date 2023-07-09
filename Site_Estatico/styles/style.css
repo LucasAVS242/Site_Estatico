@@ -49,9 +49,18 @@ img.center {
     
 }
 
-.wrap, .content{
+.wrap{
+    padding: 3% 6% 0% 9%;
+}
+
+.content{
     color: white;
-    padding: 3% 10% 0% 10%;
-    font-size: 100px;
+    
     text-shadow: 2px 1px #247454;
+    padding: 9% 10% 0% 10%;;
+}
+
+.content h1{
+    font-size: 50px;
+    text-align: justify;
 }

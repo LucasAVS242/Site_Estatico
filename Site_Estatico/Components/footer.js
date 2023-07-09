@@ -6,7 +6,7 @@ class footer extends HTMLElement {
 
   connectedCallback() {
     this.innerHTML = `
-    <p style="padding: 10%;"></p>
+    <p style="padding: 7%;"></p>
     <footer style="background-color: #3cab7b;" class="text-center text-lg-start text-white">
    
       <div class="container p-4">
@@ -20,24 +20,24 @@ class footer extends HTMLElement {
                    loading="lazy" />
             
   
-            <p class="text-left">BVM auditores contabilidade</p>
+            <p style="padding-left:10px;" class="text-left">auditores contabilidade</p>
   
             
           </div>
   
          
-          <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+          <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
             <h5 class="text-uppercase mb-4">Contato</h5>
   
             <ul class="list-unstyled">
                 <li>
-                  <p><i class="fas fa-map-marker-alt pe-2"></i>Endereço: Ladeira São João, 212 - Centro, Itapira - SP, 13970-341</p>
+                  <p><i class="fas fa-map-marker-alt pe-2"></i><b>Endereço</b>: Ladeira São João, 212 - Centro, Itapira - SP, 13970-341</p>
                 </li>
                 <li>
-                  <p><i class="fas fa-phone pe-2"></i>Telefone: (19) 3863-4200</p>
+                  <p><i class="fas fa-phone pe-2"></i><b>Telefone</b>: (19) 3863-4200</p>
                 </li>
                 <li>
-                  <p><i class="fas fa-envelope pe-2 mb-0"></i>E-mail: auditor@bvmauditores.com.br</p>
+                  <p><i class="fas fa-envelope pe-2 mb-0"></i><b>E-mail</b>: auditor@bvmauditores.com.br</p>
                 </li>
               </ul>
           </div>

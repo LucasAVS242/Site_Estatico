@@ -7,7 +7,7 @@ class footer extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
     <p style="padding: 10%;"></p>
-    <footer class="text-center text-lg-start text-white">
+    <footer style="background-color: #3cab7b;" class="text-center text-lg-start text-white">
    
       <div class="container p-4">
        

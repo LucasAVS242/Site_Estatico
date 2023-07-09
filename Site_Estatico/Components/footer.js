@@ -24,8 +24,7 @@ class footer extends HTMLElement {
   
             
           </div>
-  
-         
+
           <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
             <h4 class="text-uppercase mb-4">Contato</h4>
   

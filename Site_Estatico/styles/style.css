@@ -46,10 +46,12 @@ img.center {
     position: absolute;
     top: 0;
     left: 0;
-    color: white;
+    
 }
 
 .wrap, .content{
+    color: white;
     padding: 3% 10% 0% 10%;
-    font-size: 60px;
+    font-size: 100px;
+    text-shadow: 2px 1px #247454;
 }

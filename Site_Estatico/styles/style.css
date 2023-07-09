@@ -38,7 +38,7 @@ img.center {
 }
 
 .wrap {
-    display: inline-block;
+
     position: relative;
 }
 
@@ -46,10 +46,21 @@ img.center {
     position: absolute;
     top: 0;
     left: 0;
-    color: white;
+    
 }
 
-.wrap, .content{
-    padding: 3% 10% 0% 10%;
-    font-size: 60px;
+.wrap{
+    padding: 3% 6% 0% 9%;
+}
+
+.content{
+    color: white;
+    
+    text-shadow: 2px 1px #247454;
+    padding: 9% 10% 0% 10%;;
+}
+
+.content h1{
+    font-size: 50px;
+    text-align: center;
 }

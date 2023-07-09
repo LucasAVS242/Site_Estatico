@@ -88,3 +88,22 @@ img.center {
   #myBtn:hover {
     background-color: #555; /* Add a dark-grey background on hover */
   }
+
+  .footer-link a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+
+  }
+
+  .footer-link a:hover{
+    color: #247454;
+  }
+
+  footer{
+    font-size: 18px;
+  }
+  
+  footer h4{
+    font-weight: bolder;
+  }

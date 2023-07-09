@@ -20,7 +20,7 @@ class footer extends HTMLElement {
                    loading="lazy" />
             
   
-            <p style="padding-left:10px;" class="text-left">auditores contabilidade</p>
+            <p style="padding-left:10px;" class="text-left">Auditores Contabilidade</p>
   
             
           </div>
@@ -50,7 +50,7 @@ class footer extends HTMLElement {
           <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
             <h4 class="text-uppercase mb-4">Contato</h4>
   
-            <ul class="list-unstyled">
+            <ul class="list-unstyled footer-link">
                 <li>
                   <p><i class="fas fa-map-marker-alt pe-2"></i><b>Endereço</b>: Ladeira São João, 212 - Centro, Itapira - SP, 13970-341</p>
                 </li>
@@ -58,7 +58,7 @@ class footer extends HTMLElement {
                   <p><i class="fas fa-phone pe-2"></i><b>Telefone</b>: (19) 3863-4200</p>
                 </li>
                 <li>
-                  <p><i class="fas fa-envelope pe-2 mb-0"></i><b>E-mail</b>: auditor@bvmauditores.com.br</p>
+                  <p><a href="mailto:auditor@bvmauditores.com.br"><i class="fas fa-envelope pe-2 mb-0"></i><b>E-mail</b>: auditor@bvmauditores.com.br</a></p>
                 </li>
               </ul>
           </div>
@@ -70,7 +70,7 @@ class footer extends HTMLElement {
   
       
       <div class="text-center p-3" style="background-color: #247454">
-        © 2023 Copyright:
+        © 2023 Copyright: BVM Contabilidade - Todos os Direitos Reservados
       </div>
       
     </footer>

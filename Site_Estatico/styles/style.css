@@ -108,4 +108,7 @@ img.center {
     font-weight: bolder;
   }
 
- 
+.nav-item a:hover {
+    color: #3cab7b;
+    font-weight: bolder;
+}

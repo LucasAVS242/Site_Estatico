@@ -37,3 +37,19 @@ img.center {
     padding-bottom: 25px;
 }
 
+.wrap {
+    display: inline-block;
+    position: relative;
+}
+
+.wrap img + .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+}
+
+.wrap, .content{
+    padding: 3% 10% 0% 10%;
+    font-size: 60px;
+}

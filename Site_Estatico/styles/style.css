@@ -50,9 +50,7 @@ img.center {
 }
 
 .wrap{
-    display: flex;
-    justify-content: center;
-    padding: 3% 0 3% 0;
+    padding: 3% 6% 0% 9%;
 }
 
 .content{

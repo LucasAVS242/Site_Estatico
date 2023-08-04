@@ -158,14 +158,20 @@ footer h4 {
         background-color: #1d4a36 !important;
     }
 
-    #contato .container:last-child {
+    #contato .container:last-child,form {
         background-color: #295f4e;
         border-radius: 35px;
         padding: 20px;
         text-indent: 10px;
     }
 
-    #contato main h3 {
+    #contato main h3{
+        background-color: #1d4a36;
+        border-radius: 35px;
+        color: #fff;
+        padding: 3px;
+    }
+    #contato form h3{
         background-color: #1d4a36;
         border-radius: 35px;
         color: #fff;

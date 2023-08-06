@@ -180,3 +180,22 @@ footer h4 {
         font-weight: bolder;
     }
 }
+#contato main h3{
+    background-color: #1d4a36;
+    border-radius: 35px;
+    color: #fff;
+    padding: 3px;
+}
+#contato form h3{
+    background-color: #1d4a36;
+    border-radius: 35px;
+    color: #fff;
+    padding: 3px;
+    text-align: center;
+    font-weight: bolder;
+}
+img.rounded-corners{
+    border-radius: 75px;
+}
+
+

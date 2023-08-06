@@ -137,6 +137,17 @@ footer h4 {
     .nav-link {
         color: #fff;
     }
+    .dropdown-menu{
+        background-color: #181a1b;
+    }
+    .dropdown-item{
+        color:#fff;
+        
+    }
+    .dropdown-item:hover{
+        background: none;
+        
+    }
 
     .active {
         color: #3cab7b !important;

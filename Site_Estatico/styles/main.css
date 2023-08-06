@@ -161,25 +161,25 @@ footer h4 {
     }
 
     #contato .container:last-child,form {
-        background-color: #295f4e;
-        border-radius: 35px;
-        padding: 20px;
-        text-indent: 10px;
+        background-color: #295f4e !important; 
+        border-radius: 35px !important;
+        padding: 20px !important;
+        text-indent: 10px !important;
     }
 
     #contato main h3{
-        background-color: #1d4a36;
-        border-radius: 35px;
-        color: #fff;
-        padding: 3px;
+        background-color: #1d4a36 !important;
+        border-radius: 35px !important;
+        color: #fff !important;
+        padding: 3px !important;
     }
     #contato form h3{
-        background-color: #1d4a36;
-        border-radius: 35px;
-        color: #fff;
-        padding: 3px;
-        text-align: center;
-        font-weight: bolder;
+        background-color: #1d4a36 !important;
+        border-radius: 35px !important;
+        color: #fff !important;
+        padding: 3px !important;
+        text-align: center !important;
+        font-weight: bolder !important;
     }
 }
 #contato main h3{
@@ -199,5 +199,19 @@ footer h4 {
 img.rounded-corners{
     border-radius: 75px;
 }
+
+#contato .container:last-child,form{
+    background-color: #9cd4bc;
+    border-radius: 35px;
+    padding: 20px;
+    text-indent: 10px;
+  }
+
+ #contato .container:last-child ul {
+    font-size: 27px;
+    border-radius: 20%;
+    text-align: justify;
+    padding-left: 5px;
+  }
 
 

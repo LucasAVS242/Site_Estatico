@@ -160,27 +160,16 @@ footer h4 {
         background-color: #1d4a36 !important;
     }
 
-    #contato .container:last-child,form {
-        background-color: #295f4e !important; 
-        border-radius: 35px !important;
-        padding: 20px !important;
-        text-indent: 10px !important;
+    form input,textarea {
+        background-color: #333333;
+        border-color: #181a1b;
+        color: #fff;
     }
 
-    #contato main h3{
-        background-color: #1d4a36 !important;
-        border-radius: 35px !important;
-        color: #fff !important;
-        padding: 3px !important;
+    #contato .container:last-child,form {
+        background-color: #295f4e !important; 
     }
-    #contato form h3{
-        background-color: #1d4a36 !important;
-        border-radius: 35px !important;
-        color: #fff !important;
-        padding: 3px !important;
-        text-align: center !important;
-        font-weight: bolder !important;
-    }
+
 }
 #contato main h3{
     background-color: #1d4a36;

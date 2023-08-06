@@ -222,4 +222,7 @@ img.rounded-corners {
     margin-right: 50px;
 }
 
+input{
+    border: thin;
+}
 

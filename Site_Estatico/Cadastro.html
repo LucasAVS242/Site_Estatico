@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
@@ -17,14 +17,25 @@
 
   <script src="Components/footer.js" type="text/javascript" defer></script>
   <script src="Components/btn.js" type="text/javascript" defer></script>
+
+  <style>
+    button {
+      background-color: #247454;
+      border: none;
+      padding: 7px 12px;
+      border-radius: 10%;
+      color: white;
+    }
+
+    main h1 {
+      text-align: center;
+      background-color: #245c44;
+      color: #fff;
+    }
+  </style>
 </head>
 
 <body>
-
-
-  <button onclick="topFunction()" id="myBtn" title="ir para o começo">&#129093;</button>
-
-
   <header>
     <nav class="navbar navbar-expand-lg bg-light">
       <div class="container-fluid">
@@ -54,9 +65,9 @@
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Conta</a>
                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="Login.html">Entrar</a></li>
-                  <li><a class="dropdown-item" href="Cadastro.html">Cadastrar</a></li>
-              </ul>
+                    <li><a class="dropdown-item" href="Login.html">Entrar</a></li>
+                    <li><a class="dropdown-item" href="Cadastro.html">Cadastrar</a></li>
+                </ul>
             </li>
         </ul>
         </div>
@@ -64,22 +75,43 @@
     </nav>
   </header>
 
-
   <main>
     <div class="container">
-      <div class="wrap">
-        <img class="rounded" src="images/bg/office3.jpg" height="500px" width="1100px" />
-        <div class="content">
-          <h1>Contabilidade de confiança para o seu negócio</h1>
-        </div>
-      </div>
-    </div>
+      <h1 style="margin-top: 2%; margin-bottom: 5%;">Cadastro</h1>
+    <form action="" method="post">
+    <table>
+      <tr>
+        <td>
+          <label for="usuario">Usuário:</label>
+          <br>
+          <input type="text" name="usuario" size="35">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="senha">Senha:</label>
+          <br>
+          <input type="password" name="senha" size="35">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="senha">Repita a senha:</label>
+          <br>
+          <input type="password" name="senha" size="35">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button style="margin-top: 5px;" type="submit" href="/">Cadastrar</button>
+        </td>
+      </tr>
+    </table>
+  </form>
+</div>
   </main>
 
-
   <footer-component></footer-component>
-
-
 </body>
 
 </html>

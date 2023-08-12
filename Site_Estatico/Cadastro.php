@@ -9,8 +9,8 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
   <!-- Link JS Bootstrap -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" 
     crossorigin="anonymous"></script>
 
   <link rel="stylesheet" href="styles/main.css" type="text/css">
@@ -38,7 +38,9 @@
       color: white;
     }
 
-    .error {color: #FF0000;}
+    .error {
+      color: #FF0000;
+    }
   </style>
 </head>
 
@@ -54,7 +56,7 @@
     } else {
       $usuario = test_input($_POST["usuario"]);
     }
-    
+
     if (empty($_POST["email"])) {
       $emailErr = "*E-mail é obrigatório";
     } else {
@@ -82,7 +84,8 @@
     }
   }
 
-  function test_input($data) {
+  function test_input($data)
+  {
     $data = trim($data);
     $data = stripslashes($data);
     $data = htmlspecialchars($data);
@@ -97,8 +100,7 @@
         <a class="navbar-brand" href="index.html">
           <img class="logo" src="images/logotipo.png" alt="BVM Contabilidade">
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -118,13 +120,13 @@
           </ul>
           <ul class="navbar-nav ms-auto">
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Conta</a>
-                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="Login.html">Entrar</a></li>
-                    <li><a class="dropdown-item" href="Cadastro.html">Cadastrar</a></li>
-                </ul>
+              <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Conta</a>
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="Login.html">Entrar</a></li>
+                <li><a class="dropdown-item" href="Cadastro.html">Cadastrar</a></li>
+              </ul>
             </li>
-        </ul>
+          </ul>
         </div>
       </div>
     </nav>
@@ -133,48 +135,48 @@
   <main>
     <div style="padding-left: 20%; padding-right: 20%;" class="container">
       <h1 style="margin-top: 2%; margin-bottom: 5%;">Cadastro</h1>
-    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
-    <table>
-      <tr>
-        <td>
-          <label for="usuario">Usuário:</label>
-          <br>
-          <input type="text" name="usuario" size="35" value="<?php echo $usuario;?>">
-          <span class="error"><br> <?php echo $usuarioErr;?></span>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <label for="email">E-mail:</label>
-          <br>
-          <input type="email" name="email" size="35" value="<?php echo $email;?>">
-          <span class="error"><br> <?php echo $emailErr;?></span>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <label for="senha">Senha:</label>
-          <br>
-          <input type="password" name="senha" size="35" value="<?php echo $senha;?>">
-          <span class="error"><br> <?php echo $senhaErr;?></span>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <label for="senha">Repita a senha:</label>
-          <br>
-          <input type="password" name="rsenha" size="35" value="<?php echo $rsenha;?>">
-          <span class="error"><br> <?php echo $rsenhaErr;?></span>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <button style="margin-top: 5px;" type="submit" href="/">Cadastrar</button>
-        </td>
-      </tr>
-    </table>
-  </form>
-</div>
+      <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+        <table>
+          <tr>
+            <td>
+              <label for="usuario">Usuário:</label>
+              <br>
+              <input type="text" name="usuario" size="35" value="<?php echo $usuario; ?>">
+              <span class="error"><br> <?php echo $usuarioErr; ?></span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="email">E-mail:</label>
+              <br>
+              <input type="email" name="email" size="35" value="<?php echo $email; ?>">
+              <span class="error"><br> <?php echo $emailErr; ?></span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="senha">Senha:</label>
+              <br>
+              <input type="password" name="senha" size="35" value="<?php echo $senha; ?>">
+              <span class="error"><br> <?php echo $senhaErr; ?></span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="senha">Repita a senha:</label>
+              <br>
+              <input type="password" name="rsenha" size="35" value="<?php echo $rsenha; ?>">
+              <span class="error"><br> <?php echo $rsenhaErr; ?></span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <button style="margin-top: 5px;" type="submit" href="/">Cadastrar</button>
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
   </main>
 
   <footer-component></footer-component>

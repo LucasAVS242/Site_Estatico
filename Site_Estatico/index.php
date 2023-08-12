@@ -49,6 +49,18 @@
             <li class="nav-item">
               <a class="nav-link" href="Contato.html">Contato</a>
             </li>
+            <?php if ( is_user_logged_in() ) { ?>
+              <li class="nav-item">
+              <a class="nav-link" href="insert.php">Inserir</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="users.php">Usuarios</a>
+            </li>
+
+
+              <?php } ?>
+
+              
           </ul>
           <ul class="navbar-nav ms-auto">
             <li class="nav-item dropdown">

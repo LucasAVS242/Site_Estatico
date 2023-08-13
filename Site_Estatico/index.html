@@ -17,6 +17,7 @@
 
   <script src="Components/footer.js" type="text/javascript" defer></script>
   <script src="Components/btn.js" type="text/javascript" defer></script>
+  <script src="Components/LoginModal.js" type="text/javascript" defer></script>
 </head>
 
 <body>
@@ -51,11 +52,31 @@
             </li> 
           </ul>
           <ul class="navbar-nav ms-auto">
-            <li class="nav-item dropdown">
+            <!--<li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Conta</a>
                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                   <li><a class="dropdown-item" href="Login.html">Entrar</a></li>
-                  <li><a class="dropdown-item" href="Cadastro.html">Cadastrar</a></li>
+                  <li><a class="dropdown-item" href="Cadastro.html">Cadastrar</a></li> -->
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Conta
+                  </button>
+                  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="exampleModalLabel">Acessar a Conta</h1>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          ...
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                          <button type="button" class="btn btn-primary">Entrar</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
 
               </ul>
             </li>
@@ -77,8 +98,17 @@
     </div>
   </main>
 
+  <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+
+
 
   <footer-component></footer-component>
+
 
 
 </body>

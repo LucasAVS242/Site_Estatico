@@ -2,11 +2,11 @@
 
 $localhost = "localhost"; //define variavel
 
-$username = "root";
+$username = "id21030609_admin";
 
-$password = "";
+$password = "oW4QYN#$4Boz!n&";
 
-$dbname = "samueldb";
+$dbname = "id21030609_db_cadastrousuario";
 
 $con = mysqli_connect($localhost,$username,$password,$dbname);//abre a conexão com o banco de dados
 

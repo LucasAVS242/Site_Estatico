@@ -231,3 +231,8 @@ input{
 #Modal button, #Modal h1{
   color: rgb(97, 96, 96);
 }
+
+#Modal input{
+    margin: 4%;
+    padding: 3%;
+}

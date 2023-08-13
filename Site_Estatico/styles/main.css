@@ -116,7 +116,7 @@ footer h4 {
     font-size: 1.2em;
 }
 
-.nav-item a:hover,button:hover {
+.nav-item a:hover,button:hover{
     color: #3cab7b;
     font-weight: bolder;
 }

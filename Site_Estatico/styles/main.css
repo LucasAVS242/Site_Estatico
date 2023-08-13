@@ -112,11 +112,11 @@ footer h4 {
     font-weight: bolder;
 }
 
-.nav-item {
+.nav-item{
     font-size: 1.2em;
 }
 
-.nav-item a:hover {
+.nav-item a:hover,button:hover {
     color: #3cab7b;
     font-weight: bolder;
 }
@@ -179,6 +179,9 @@ footer h4 {
     #contato .container:last-child,form {
         background-color: #295f4e !important; 
     }
+    .Modal {
+        all: unset;
+    }
 
 }
 #contato main h3 {
@@ -225,3 +228,6 @@ input{
     border: thin;
 }
 
+.exampleModal {
+    all: unset;
+}

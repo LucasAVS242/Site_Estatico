@@ -31,16 +31,16 @@ class footer extends HTMLElement {
             <ul class="list-unstyled">
           
                 <li>
-                  <p><i class="fas fa-map-marker-alt pe-2"></i><a href="index.html">Home</a></p>
+                  <p><a href="index.html">Home</a></p>
                 </li>
                 <li>
-                  <p><i class="fas fa-phone pe-2"></i><a href="servicos.html">Serviços</a></p>
+                  <p><a href="Servicos.html">Serviços</a></p>
                 </li>
                 <li>
-                  <p><i class="fas fa-envelope pe-2 mb-0"></i><a href="QuemSomos.html">Quem somos</a></p>
+                  <p><a href="QuemSomos.html">Quem somos</a></p>
                 </li>
                 <li>
-                  <p><i class="fas fa-envelope pe-2 mb-0"></i><a href="Contato.html">Contato</a></p>
+                  <p><a href="Contato.html">Contato</a></p>
                 </li>
               </ul>
               </div>
@@ -52,13 +52,13 @@ class footer extends HTMLElement {
   
             <ul class="list-unstyled footer-link">
                 <li>
-                  <p><i class="fas fa-map-marker-alt pe-2"></i><b>Endereço</b>: Ladeira São João, 212 - Centro, Itapira - SP, 13970-341</p>
+                  <p><i class="fas fa-map-marker-alt pe-2"></i>Ladeira São João, 212 - Centro, Itapira - SP, 13970-341</p>
                 </li>
                 <li>
-                  <p><i class="fas fa-phone pe-2"></i><b>Telefone</b>: (19) 3863-4200</p>
+                  <p><i class="fas fa-phone pe-2"></i>(19) 3863-4200</p>
                 </li>
                 <li>
-                  <p><a href="mailto:auditor@bvmauditores.com.br"><i class="fas fa-envelope pe-2 mb-0"></i><b>E-mail</b>: auditor@bvmauditores.com.br</a></p>
+                  <p><a href="mailto:auditor@bvmauditores.com.br"><i class="fas fa-envelope pe-2 mb-0"></i>auditor@bvmauditores.com.br</a></p>
                 </li>
               </ul>
           </div>

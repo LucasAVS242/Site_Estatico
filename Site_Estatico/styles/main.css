@@ -234,7 +234,7 @@ input{
 }
 
 #Modal input{
-    margin: 4% 0 0 4%;
+    margin: 4% 0 0 0;
     padding: 3%;
     font-size: 20px;
 }

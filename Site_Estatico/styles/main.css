@@ -116,7 +116,7 @@ footer h4 {
     font-size: 1.2em;
 }
 
-.nav-item a:hover,#Modal button:hover{
+.nav-item a:hover{
     color: #3cab7b;
     font-weight: bolder;
 }
@@ -228,7 +228,7 @@ input{
     border: thin;
 }
 
-#Modal button, #Modal h1{
+#Modal h1{
   color: rgb(97, 96, 96);
 
 }
@@ -237,4 +237,12 @@ input{
     margin: 4% 0 0 4%;
     padding: 3%;
     font-size: 20px;
+}
+#Modal button:hover{
+    font-weight: bolder;
+    background-color: #247454;
+}
+
+#Modal button{
+    background:#3cab7b;
 }

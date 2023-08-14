@@ -87,15 +87,42 @@
               <a class="nav-link" href="Contato.html">Contato</a>
             </li>
           </ul>
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Conta</a>
-                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="#">Entrar</a></li>
-                    <li><a class="dropdown-item" href="#">Cadastrar</a></li>
-                </ul>
-            </li>
-        </ul>
+          <div id="Modal" class="navbar-nav ms-auto">
+            <!-- Button trigger modal -->
+            <button style=" border: none;" type="button" class="btn btn-primary"
+              data-bs-toggle="modal" data-bs-target="#exampleModal">
+              Conta
+            </button>
+  
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    
+                    <h1 class="modal-title fs-3" id="exampleModalLabel">Entrar na conta</h1>
+                    <button style="background:none; font-weight: bolder;" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">X</button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="container">
+                      <div class="row">
+                    <form style="all: unset;" action="" method="post">        
+                          <input style="border: solid thin rgb(97, 96, 96); background: none;width:100%;" type="text" placeholder="Usuário" name="usuario">               
+                          <input style=" border: solid thin rgb(97, 96, 96); background: none; width:100%;" type="password" placeholder="Senha" name="Senha">
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button style=" background-color: grey; color:#fff;" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Sair</button>
+                    <button style="border:none; color:#fff;" type="button"
+                      class="btn btn-primary">Entrar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </nav>

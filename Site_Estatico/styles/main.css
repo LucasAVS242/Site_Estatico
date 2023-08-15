@@ -136,13 +136,16 @@ footer h4 {
     .nav-link {
         color: #fff;
     }
+
     .dropdown-menu{
         background-color: #181a1b;
     }
+
     .dropdown-item{
         color:#fff;
         
     }
+
     .dropdown-item:hover{
         background: none;
         
@@ -179,11 +182,24 @@ footer h4 {
     #contato .container:last-child,form {
         background-color: #295f4e !important; 
     }
+
     .Modal {
         all: unset;
     }
+    
+    .modal-content, .modal-content form {
+        background-color: #181a1b !important;
+    }
 
+    .modal-header .modal-title {
+        color: #fff !important;
+    }
+
+    .modal-content .btn-close {
+        color: #fff !important;
+    }
 }
+
 #contato main h3 {
     background-color: #1d4a36;
     border-radius: 35px;
@@ -238,6 +254,7 @@ input{
     padding: 3%;
     font-size: 20px;
 }
+
 #Modal button:hover{
     font-weight: bolder;
     background-color: #247454;

@@ -5,27 +5,27 @@ require_once 'connect.php';
 echo"<div class='container'>";
 
 if(isset($_POST['delete'])){
-    $sql="DELETE FROM users WHERE idUsuario=".$_POST['idUsuario'];
+    $sql="DELETE FROM tbUsuario WHERE idUsuario=".$_POST['idUsuario'];
 
     if($con->query($sql) === TRUE){
         echo"<div class='alert alert-success'>O usuario foi deletado com sucesso</div>";
 
     }
 }
-$sql = "SELECT * FROM users";
+$sql = "SELECT * FROM tbUsuario";
 $result=$con->query($sql);
 
 if($result->num_rows>0)
 {
     ?>
-    <h2>List of all Users</h2>
+    <h2>Lista de todos os usuarios</h2>
     <table class="table table-bordered table-striped">
         <tr>
-            <td>Firstname</td>
-            <td>Lastname</td>
-            <td>Address</td>
-            <td>Contact</td>
-            <td width="70px">Delete</td>
+            <td>Nome</td>
+            <td>Sobrenome</td>
+            <td>Endereço</td>
+            <td>Contato</td>
+            <td width="70px">Deletar</td>
             <td width="70px">EDIT</td>
 
         </tr>

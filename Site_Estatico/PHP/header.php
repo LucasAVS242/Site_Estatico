@@ -13,7 +13,7 @@
     integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
     crossorigin="anonymous"></script>
 
-  <link rel="stylesheet" href="../styles/main.css" type="text/css">
+    <link rel="stylesheet" href="../styles/main.css" type="text/css">
 
   <script src="Components/footer.js" type="text/javascript" defer></script>
   <script src="Components/btn.js" type="text/javascript" defer></script>

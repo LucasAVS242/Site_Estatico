@@ -26,14 +26,14 @@ if($result->num_rows>0)
             <td>Endereço</td>
             <td>Contato</td>
             <td width="70px">Deletar</td>
-            <td width="70px">EDIT</td>
+            <td width="70px">Editar</td>
 
         </tr>
         <?php
 
 while($row = $result->fetch_assoc()){
     echo "<form action='' method='POST'>";   //added
-    echo "<input type='hidden' value='".$row['user_id']."' name='userid' />";   //added
+    echo "<input type='hidden' value='".$row['idUsuario']."' name='idUsuario' />";   //added
     echo "<tr>";
     echo "<td>".$row['firstname']."</td>";
     echo "<td>".$row['lastname']."</td>";

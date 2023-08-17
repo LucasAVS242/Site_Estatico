@@ -48,7 +48,7 @@
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="users.php">Usuários</a>
+              <a class="nav-link" href="users.php">Registros</a>
             </li>
           </ul>
           <ul class="navbar-nav ms-auto">

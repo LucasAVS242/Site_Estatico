@@ -18,7 +18,7 @@ $result=$con->query($sql);
 if($result->num_rows>0)
 {
     ?>
-    <h2>Lista de Usuários</h2>
+    <h2><i class="fa-solid fa-user"></i>&nbsp;Lista de Usuários</h2>
     <table class="table table-bordered table-striped">
         <tr>
             <td>Usuário</td>

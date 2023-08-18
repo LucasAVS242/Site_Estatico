@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <title>BVM Auditores</title>
   <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+  <!-- Link Font Awesome  -->
+  <script src="https://kit.fontawesome.com/26c14cdb57.js" crossorigin="anonymous"></script>
   <!-- Link CSS Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
   <!-- Link JS Bootstrap -->
@@ -42,20 +44,20 @@
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Cadastrar</a>
               <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="insert.php">Usuário</a></li>
+                <li><a class="dropdown-item" href="cadastrar-usuario.php">Usuário</a></li>
                 <li><a class="dropdown-item" href="../index.html">Cliente</a></li>
                 <li><a class="dropdown-item" href="../index.html">Serviços</a></li>
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="users.php">Registros</a>
+              <a class="nav-link" href="usuarios.php">Registros</a>
             </li>
           </ul>
           <ul class="navbar-nav ms-auto">
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Conta</a>
               <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="../index.html">Sair</a></li>
+                <li><a class="dropdown-item" href="logout.php">Sair</a></li>
               </ul>
             </li>
           </ul>

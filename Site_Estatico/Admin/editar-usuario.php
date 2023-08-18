@@ -13,7 +13,7 @@ require_once'header.php';
             $lastname = $_POST['lastname'];
             $address = $_POST['address'];
             $contact = $_POST['contact'];
-            $sql = "UPDATE users SET firstname='{$firstname}', lastname='{$lastname}', address='{$address}', contact='{$contact}' WHERE user_id=". $_POST['userid'];
+            $sql = "UPDATE tbUsuario SET firstname='{$firstname}', lastname='{$lastname}', address='{$address}', contact='{$contact}' WHERE user_id=". $_POST['userid'];
 
             if($con->query($sql) === TRUE){
                 echo "<div class='alert alert-success'>Usuário atualizado com sucesso</div>";
@@ -24,7 +24,7 @@ require_once'header.php';
     }
 
     $id = isset($_GET['id']) ? (int) $_GET['id'] : 0;
-    $sql = "SELECT * FROM users WHERE user_id={$id}";
+    $sql = "SELECT * FROM tbUsuario WHERE idUsuario={$id}";
     $result = $con->query($sql);
 
     if($result->num_rows < 1){
@@ -38,9 +38,9 @@ require_once'header.php';
     <div class="row">
         <div class="col-md-6 col-md-offset-3">
             <div class="box">
-                <h3><i class="glyphicon-plus"></i>&nbsp;Editar Usuário</h3>
+                <h3><i class="fa-solid fa-pen-to-square"></i>&nbsp;Editar Usuário</h3>
                 <form action="" method="POST">
-                    <input type="hidden" value="<?php echo $row['user_id'];?>" name="userid">
+                    <input type="hidden" value="<?php echo $row['idUsuario'];?>" name="idUsuario">
 
                     <label for="firstname">Nome</label>
                     <input type="text" id="firstname" name="firstname" value="<?php echo $row['firstname']; ?>" class="form-control"><br>

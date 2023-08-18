@@ -22,7 +22,6 @@ if($result->num_rows>0)
     <table class="table table-bordered table-striped">
         <tr>
             <td>Usuário</td>
-            <td>Senha</td>
             <td>Nível de Acesso</td>
             <td>Data de Cadastro</td>
             <td>Cadastrado Por</td>
@@ -37,7 +36,6 @@ while($row = $result->fetch_assoc()){
     echo "<input type='hidden' value='".$row['idUsuario']."' name='idUsuario' />";
     echo "<tr>";
     echo "<td>".$row['nomeUsuario']."</td>";
-    echo "<td>".$row['senha']."</td>";
     echo "<td>".$row['nivelAcesso']."</td>";
     echo "<td>".$row['dataCadastro']."</td>";
     echo "<td>".$row['cadastradoPor']."</td>";

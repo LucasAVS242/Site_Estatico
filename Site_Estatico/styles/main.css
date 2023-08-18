@@ -264,6 +264,13 @@ input{
     background:#3cab7b;
 }
 
+<<<<<<< HEAD
 #tabela td{
     background-color: #358f68;
 }
+=======
+td {
+    background-color: #295f4e !important;
+    color: #fff;
+}
+>>>>>>> 703059a57e1486441f9c7046d4e4888f41184917

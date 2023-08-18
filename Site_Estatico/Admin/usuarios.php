@@ -2,8 +2,21 @@
 
 require_once 'connect.php';
 require_once 'header.php';
-echo"<div class='container'>";
 
+?>
+
+<html>
+    <head>
+        <style>
+            .tbHead td {
+                background-color: #295f4e !important;
+                color: #fff !important;
+            }
+        </style>
+    </head>
+</html>
+
+<?php
 if(isset($_POST['delete'])){
     $sql="DELETE FROM tbUsuario WHERE idUsuario=".$_POST['idUsuario'];
 
@@ -18,9 +31,14 @@ $result=$con->query($sql);
 if($result->num_rows>0)
 {
     ?>
+    <div class="container">
     <h2><i class="fa-solid fa-user"></i>&nbsp;Lista de Usuários</h2>
     <table class="table table-bordered table-striped">
+<<<<<<< HEAD
         <tr class="tabela">
+=======
+        <tr class="tbHead">
+>>>>>>> 703059a57e1486441f9c7046d4e4888f41184917
             <td>Usuário</td>
             <td>Nível de Acesso</td>
             <td>Data de Cadastro</td>
@@ -53,6 +71,7 @@ else
 echo "<br><br><div class='alert alert-warning'>Nenhum registro encontrado</div>";
 }
 ?>
+</div>
 </div>
 <?php
 require_once'footer.php';

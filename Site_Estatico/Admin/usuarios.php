@@ -20,7 +20,7 @@ if($result->num_rows>0)
     ?>
     <h2><i class="fa-solid fa-user"></i>&nbsp;Lista de Usuários</h2>
     <table class="table table-bordered table-striped">
-        <tr>
+        <tr class="tabela">
             <td>Usuário</td>
             <td>Nível de Acesso</td>
             <td>Data de Cadastro</td>

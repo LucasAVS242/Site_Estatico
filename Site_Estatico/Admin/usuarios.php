@@ -34,11 +34,7 @@ if($result->num_rows>0)
     <div class="container">
     <h2><i class="fa-solid fa-user"></i>&nbsp;Lista de Usuários</h2>
     <table class="table table-bordered table-striped">
-<<<<<<< HEAD
-        <tr class="tabela">
-=======
         <tr class="tbHead">
->>>>>>> 703059a57e1486441f9c7046d4e4888f41184917
             <td>Usuário</td>
             <td>Nível de Acesso</td>
             <td>Data de Cadastro</td>

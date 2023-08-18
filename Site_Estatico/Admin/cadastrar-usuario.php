@@ -43,7 +43,7 @@ require_once 'header.php';
                     <input type="text" id="nomeUsuario" name="nomeUsuario" class="form-control"><br>
 
                     <label for="senha">Senha</label>
-                    <input type="text" name="senha" id="senha" class="form-control"><br>
+                    <input type="password" name="senha" id="senha" class="form-control"><br>
 
                     <label for="nivelAcesso">Nível de Acesso</label>
                     <input type="text" name="nivelAcesso" id="nivelAcesso" class="form-control"><br>

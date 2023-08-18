@@ -263,3 +263,8 @@ input{
 #Modal button{
     background:#3cab7b;
 }
+
+td {
+    background-color: #295f4e !important;
+    color: #fff;
+}

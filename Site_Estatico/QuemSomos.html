@@ -14,7 +14,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
     crossorigin="anonymous"></script>
-  
+
   <link rel="stylesheet" href="styles/main.css" type="text/css">
 
   <script src="Components/footer.js" type="text/javascript" defer></script>
@@ -24,18 +24,19 @@
     main {
       font-size: 1.2em;
     }
+
     section {
       background-color: #9cd4bc;
       border-radius: 35px;
       padding: 20px;
       text-indent: 10px;
     }
+
     section h1 {
       background-color: #245c44;
       border-radius: 35px;
       color: #fff;
     }
-    
   </style>
 </head>
 
@@ -68,35 +69,39 @@
           </ul>
           <div id="Modal" class="navbar-nav ms-auto">
             <!-- Button trigger modal -->
-            <button style=" border: none;" type="button" class="btn btn-primary"
-              data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <button style=" border: none;" type="button" class="btn btn-primary" data-bs-toggle="modal"
+              data-bs-target="#exampleModal">
               Conta
             </button>
-  
+
             <!-- Modal -->
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
               aria-hidden="true">
               <div class="modal-dialog modal-sm">
                 <div class="modal-content">
                   <div class="modal-header">
-                    
+
                     <h1 class="modal-title fs-3" id="exampleModalLabel">Entrar na conta</h1>
-                    <button style="background:none; font-weight: bolder;" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">X</button>
+                    <button style="background:none; font-weight: bolder;" type="button" class="btn-close"
+                      data-bs-dismiss="modal" aria-label="Close">X</button>
                   </div>
                   <div class="modal-body">
                     <div class="container">
                       <div class="row">
-                    <form style="all: unset;" action="" method="post">        
-                          <input style="border: solid thin rgb(97, 96, 96); background: none;width:100%;" type="text" placeholder="Usuário" name="usuario">               
-                          <input style=" border: solid thin rgb(97, 96, 96); background: none; width:100%;" type="password" placeholder="Senha" name="Senha">
-                        </div>
+                        <form style="all: unset;" action="autenticar.php" method="post">
+                          <input style="border: solid thin rgb(97, 96, 96); background: none;width:100%;"
+                            type="username" placeholder="Usuário" name="usuario" required>
+                          <input style=" border: solid thin rgb(97, 96, 96); background: none; width:100%;"
+                            type="password" placeholder="Senha" name="senha" required>
                       </div>
-                    </form>
+                    </div>
+
                   </div>
                   <div class="modal-footer">
-                    <button style=" background-color: grey; color:#fff;" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Sair</button>
-                    <button style="border:none; color:#fff;" type="button"
-                      class="btn btn-primary">Entrar</button>
+                    <button style=" background-color: grey; color:#fff;" type="button" class="btn btn-secondary"
+                      data-bs-dismiss="modal">Sair</button>
+                    <button style="border:none; color:#fff;" type="submit" class="btn btn-primary">Entrar</button>
+                    </form>
                   </div>
                 </div>
               </div>
@@ -109,20 +114,22 @@
   <p style="padding: 10px;"></p>
 
   <main>
-    
-    <img class="center rounded-corners"  src="images/image2.jpg" width="900px" height="500px" alt="">
+
+    <img class="center rounded-corners" src="images/image2.jpg" width="900px" height="500px" alt="">
     <div class="container">
       <section>
-      <h1>Quem Somos</h1>
-      <p>Fundada em 20 de maio de 1991, como escritório individual, "Genésio Bosso Contabilidade, Auditoria & Perícia",
-        posteriormente transformada na BVM Auditores, é uma empresa multidisciplinar de serviços de Contabilidade,
-        Auditoria, Perícia e Assessoria. Atuando em Campinas, Baixa Mogiana, Circuito das Águas e Região.</p>
-      <p>Notando a necessidade de organização e fundamentos sólidos para o crescimento das empresas, apostamos no uso da
-        contabilidade como ferramenta gerencial e também organizacional.
-      </p>
-      <p>Contando com profissionais nas áreas de suporte: Departamento Fiscal, Pessoal, Custos/Financeiro, Contábil e
-        Societário; com especialização em Auditoria e Perícia, acompanhamos as empresas no seu crescimento, sendo
-        parceiros para a troca de informações objetivas e acompanhamento permanente, através da auditoria.</p>
+        <h1>Quem Somos</h1>
+        <p>Fundada em 20 de maio de 1991, como escritório individual, "Genésio Bosso Contabilidade, Auditoria &
+          Perícia",
+          posteriormente transformada na BVM Auditores, é uma empresa multidisciplinar de serviços de Contabilidade,
+          Auditoria, Perícia e Assessoria. Atuando em Campinas, Baixa Mogiana, Circuito das Águas e Região.</p>
+        <p>Notando a necessidade de organização e fundamentos sólidos para o crescimento das empresas, apostamos no uso
+          da
+          contabilidade como ferramenta gerencial e também organizacional.
+        </p>
+        <p>Contando com profissionais nas áreas de suporte: Departamento Fiscal, Pessoal, Custos/Financeiro, Contábil e
+          Societário; com especialização em Auditoria e Perícia, acompanhamos as empresas no seu crescimento, sendo
+          parceiros para a troca de informações objetivas e acompanhamento permanente, através da auditoria.</p>
       </section>
     </div>
   </main>

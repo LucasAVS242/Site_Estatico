@@ -26,6 +26,7 @@ if($result->num_rows>0)
     <h2><i class="fa-solid fa-user"></i>&nbsp;Lista de Usuários</h2>
     <table class="table table-bordered table-striped">
         <tr class="tbHead">
+            <td>ID</td>
             <td>Usuário</td>
             <td>Nível de Acesso</td>
             <td>Data de Cadastro</td>
@@ -40,6 +41,7 @@ while($row = $result->fetch_assoc()){
     echo "<form action='' method='POST'>";
     echo "<input type='hidden' value='".$row['idUsuario']."' name='idUsuario' />";
     echo "<tr>";
+    echo "<td>".$row['idUsuario']."</td>";
     echo "<td>".$row['nomeUsuario']."</td>";
     echo "<td>".$row['nivelAcesso']."</td>";
     echo "<td>".$row['dataCadastro']."</td>";

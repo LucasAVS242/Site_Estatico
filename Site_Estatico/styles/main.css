@@ -173,7 +173,7 @@ footer h4 {
         background-color: #1d4a36 !important;
     }
 
-    form input,textarea {
+    form input,textarea,select {
         background-color: #333333 !important;
         border-color: #181a1b !important;
         color: #fff !important;
@@ -197,6 +197,10 @@ footer h4 {
 
     .modal-content .btn-close {
         color: #fff !important;
+    }
+
+    #Usuarios table {
+        border-color: gray;
     }
 
     #Usuarios td {
@@ -277,4 +281,8 @@ input{
 .tbHead td {
     background-color: #295f4e !important;
     color: #fff !important;
+}
+
+.read-only {
+    color: gray !important;
 }

@@ -37,22 +37,25 @@ require_once 'header.php';
     <div class="row">
         <div class="col-md-6 col-md-offset-3">
             <div class="box">
-                <h3><i class="fa-solid fa-plus"></i>&nbsp;Adicionar Usuário</h3>
+                <h3><i class="fa-solid fa-plus"></i>&nbsp;Cadastrar Usuário</h3>
                 <form action="" method="POST">
-                    <label for="nomeUsuario">Nome</label>
+                    <label for="nomeUsuario">Usuário</label>
                     <input type="username" id="nomeUsuario" name="nomeUsuario" class="form-control"><br>
 
                     <label for="senha">Senha</label>
                     <input type="password" name="senha" id="senha" class="form-control"><br>
 
-                    <label for="nivelAcesso">Nível de Acesso</label>
-                    <input type="text" name="nivelAcesso" id="nivelAcesso" class="form-control"><br>
+                    <label for="nivelAcesso">Nível de Acesso</label><br>
+                    <select name="nivelAcesso" id="nivelAcesso" class="form-control">
+                        <option value="Administrador">Administrador</option>
+                        <option value="Usuario">Usuário</option>
+                    </select><br>
 
                     <label for="dataCadastro">Data de Cadastro</label>
-                    <input type="date" name="dataCadastro" id="dataCadastro" class="form-control"><br>
+                    <input type="text" name="dataCadastro" id="dataCadastro" class="form-control read-only" value="<?php echo date("d/m/Y") ?>" readonly><br>
 
                     <label for="cadastradoPor">Cadastrado Por</label>
-                    <input type="text" name="cadastradoPor" id="cadastradoPor" class="form-control"><br>
+                    <input type="text" name="cadastradoPor" id="cadastradoPor" class="form-control read-only" value="<?php echo $_SESSION["usuario"] ?>" readonly><br>
 
                     <br>
 

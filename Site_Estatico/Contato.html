@@ -93,35 +93,39 @@
           </ul>
           <div id="Modal" class="navbar-nav ms-auto">
             <!-- Button trigger modal -->
-            <button style=" border: none;" type="button" class="btn btn-primary"
-              data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <button style=" border: none;" type="button" class="btn btn-primary" data-bs-toggle="modal"
+              data-bs-target="#exampleModal">
               Conta
             </button>
-  
+
             <!-- Modal -->
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
               aria-hidden="true">
               <div class="modal-dialog modal-sm">
                 <div class="modal-content">
                   <div class="modal-header">
-                    
+
                     <h1 class="modal-title fs-3" id="exampleModalLabel">Entrar na conta</h1>
-                    <button style="background:none; font-weight: bolder;" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">X</button>
+                    <button style="background:none; font-weight: bolder;" type="button" class="btn-close"
+                      data-bs-dismiss="modal" aria-label="Close">X</button>
                   </div>
                   <div class="modal-body">
                     <div style="all: unset;" class="container">
-                      <div style="all: unset;"  class="row">
-                    <form style="all: unset;" action="" method="post">        
-                          <input style="border: solid thin rgb(97, 96, 96); background: none;width:100%;" type="text" placeholder="Usuário" name="usuario">               
-                          <input style=" border: solid thin rgb(97, 96, 96); background: none; width:100%;" type="password" placeholder="Senha" name="Senha">
-                        </div>
+                      <div style="all: unset;" class="row">
+                        <form style="all: unset;" action="autenticar.php" method="post">
+                          <input style="border: solid thin rgb(97, 96, 96); background: none;width:100%;"
+                            type="username" placeholder="Usuário" name="usuario" required>
+                          <input style=" border: solid thin rgb(97, 96, 96); background: none; width:100%;"
+                            type="password" placeholder="Senha" name="senha" required>
                       </div>
-                    </form>
+                    </div>
+
                   </div>
                   <div class="modal-footer">
-                    <button style=" background-color: grey; color:#fff;" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Sair</button>
-                    <button style="border:none; color:#fff;" type="button"
-                      class="btn btn-primary">Entrar</button>
+                    <button style=" background-color: grey; color:#fff;" type="button" class="btn btn-secondary"
+                      data-bs-dismiss="modal">Sair</button>
+                    <button style="border:none; color:#fff;" type="submit" class="btn btn-primary">Entrar</button>
+                    </form>
                   </div>
                 </div>
               </div>
@@ -204,7 +208,7 @@
             </tr>
             <tr>
               <td>
-                <textarea style="margin-top: 5px;" placeholder="Digite a sua Mensagem" rows="5" cols=55% ></textarea>
+                <textarea style="margin-top: 5px;" placeholder="Digite a sua Mensagem" rows="5" cols=55%></textarea>
               </td>
             </tr>
             <tr>

@@ -5,20 +5,21 @@ require_once'header.php';
 <div class="container">
     <?php
         if(isset($_POST['update'])){
-            if(empty($_POST['firstname']) || empty($_POST['lastname']) || empty($_POST['address']) || empty($_POST['contact']) )
+            if(empty($_POST['nomeUsuario']) || empty($_POST['senha']) || empty($_POST['nivelAcesso']) || empty($_POST['dataCadastro']) || empty($_POST['cadastradoPor']) )
         {
-            echo "Por favor preencha todos os campos";
+            echo "<div class='alert alert-warning'>Por favor preencha todos os campos</div>";
         }else{
-            $firstname = $_POST['firstname'];
-            $lastname = $_POST['lastname'];
-            $address = $_POST['address'];
-            $contact = $_POST['contact'];
-            $sql = "UPDATE tbUsuario SET firstname='{$firstname}', lastname='{$lastname}', address='{$address}', contact='{$contact}' WHERE user_id=". $_POST['userid'];
+            $nomeUsuario = $_POST['nomeUsuario'];
+            $senha = $_POST['senha'];
+            $nivelAcesso = $_POST['nivelAcesso'];
+            $dataCadastro = $_POST['dataCadastro'];
+            $cadastradoPor = $_POST['cadastradoPor'];
+            $sql = "UPDATE tbUsuario SET nomeUsuario='{$nomeUsuario}', senha='{$senha}', nivelAcesso='{$nivelAcesso}', dataCadastro='{$dataCadastro}', cadastradoPor='{$cadastradoPor}' WHERE idUsuario=". $_POST['idUsuario'];
 
             if($con->query($sql) === TRUE){
                 echo "<div class='alert alert-success'>Usuário atualizado com sucesso</div>";
             }else{
-                echo"<div class='alert alert-danger'>Erro: Ocorreu um erro ao atualizar as informações d usuário</div>";
+                echo"<div class='alert alert-danger'>Erro: Ocorreu um erro ao atualizar as informações do usuário</div>";
             }
         }
     }
@@ -49,13 +50,16 @@ require_once'header.php';
                     <input type="password" name="senha" id="senha" value="<?php echo $row['senha']; ?>" class="form-control"><br>
 
                     <label for="nivelAcesso">Nível de Acesso</label>
-                    <input type="text" name="nivelAcesso" id="nivelAcesso" value="<?php echo $row['nivelAcesso']; ?>" class="form-control"><br>
+                    <select name="nivelAcesso" id="nivelAcesso" value="<?php echo $row['nivelAcesso']; ?>" class="form-control">
+                        <option value="Administrador">Administrador</option>
+                        <option value="Usuario">Usuário</option>
+                    </select><br>
 
                     <label for="dataCadastro">Data de Cadastro</label>
-                    <input type="date" name="dataCadastro" id="dataCadastro" value="<?php echo $row['dataCadastro']; ?>" class="form-control"><br>
+                    <input type="text" name="dataCadastro" id="dataCadastro" value="<?php echo $row['dataCadastro']; ?>" class="form-control read-only" readonly><br>
 
                     <label for="cadastradoPor">Cadastrado Por</label>
-                    <input type="text" name="cadastradoPor" id="cadastradoPor" value="<?php echo $row['cadastradoPor']; ?>" class="form-control"><br>
+                    <input type="text" name="cadastradoPor" id="cadastradoPor" value="<?php echo $row['cadastradoPor']; ?>" class="form-control read-only" readonly><br>
 
                     <br>
 

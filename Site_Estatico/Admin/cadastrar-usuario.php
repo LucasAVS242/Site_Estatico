@@ -40,7 +40,7 @@ require_once 'header.php';
                 <h3><i class="fa-solid fa-plus"></i>&nbsp;Adicionar Usuário</h3>
                 <form action="" method="POST">
                     <label for="nomeUsuario">Nome</label>
-                    <input type="text" id="nomeUsuario" name="nomeUsuario" class="form-control"><br>
+                    <input type="username" id="nomeUsuario" name="nomeUsuario" class="form-control"><br>
 
                     <label for="senha">Senha</label>
                     <input type="password" name="senha" id="senha" class="form-control"><br>

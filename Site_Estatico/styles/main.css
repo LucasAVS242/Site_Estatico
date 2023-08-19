@@ -174,9 +174,9 @@ footer h4 {
     }
 
     form input,textarea {
-        background-color: #333333;
-        border-color: #181a1b;
-        color: #fff;
+        background-color: #333333 !important;
+        border-color: #181a1b !important;
+        color: #fff !important;
     }
 
     #contato .container:last-child,form {
@@ -197,6 +197,16 @@ footer h4 {
 
     .modal-content .btn-close {
         color: #fff !important;
+    }
+
+    #Usuarios td {
+        background-color: #333333;
+        color: #fff !important;
+    }
+
+    .btn-success {
+        background: #198754 !important;
+        border: none !important;
     }
 }
 
@@ -264,7 +274,7 @@ input{
     background:#3cab7b;
 }
 
-td {
+.tbHead td {
     background-color: #295f4e !important;
-    color: #fff;
+    color: #fff !important;
 }

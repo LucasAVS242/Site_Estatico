@@ -42,17 +42,20 @@ require_once'header.php';
                 <form action="" method="POST">
                     <input type="hidden" value="<?php echo $row['idUsuario'];?>" name="idUsuario">
 
-                    <label for="firstname">Nome</label>
-                    <input type="text" id="firstname" name="firstname" value="<?php echo $row['firstname']; ?>" class="form-control"><br>
+                    <label for="nomeUsuario">Usuário</label>
+                    <input type="username" id="nomeUsuario" name="nomeUsuario" value="<?php echo $row['nomeUsuario']; ?>" class="form-control"><br>
 
-                    <label for="lastname">Sobrenome</label>
-                    <input type="text" name="lastname" id="lastname" value="<?php echo $row['lastname']; ?>" class="form-control"><br>
+                    <label for="senha">Senha</label>
+                    <input type="password" name="senha" id="senha" value="<?php echo $row['senha']; ?>" class="form-control"><br>
 
-                    <label for="address">Endereço</label>
-                    <textarea rows="4" name="address" class="form-control"><?php echo $row['address']; ?></textarea><br>
+                    <label for="nivelAcesso">Nível de Acesso</label>
+                    <input type="text" name="nivelAcesso" id="nivelAcesso" value="<?php echo $row['nivelAcesso']; ?>" class="form-control"><br>
 
-                    <label for="contact">Contato</label>
-                    <input type="text" name="contact" id="contact" value="<?php echo $row['contact']; ?>" class="form-control"><br>
+                    <label for="dataCadastro">Data de Cadastro</label>
+                    <input type="date" name="dataCadastro" id="dataCadastro" value="<?php echo $row['dataCadastro']; ?>" class="form-control"><br>
+
+                    <label for="cadastradoPor">Cadastrado Por</label>
+                    <input type="text" name="cadastradoPor" id="cadastradoPor" value="<?php echo $row['cadastradoPor']; ?>" class="form-control"><br>
 
                     <br>
 

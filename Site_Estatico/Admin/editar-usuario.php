@@ -50,7 +50,7 @@ require_once'header.php';
                     <input type="password" name="senha" id="senha" value="<?php echo $row['senha']; ?>" class="form-control"><br>
 
                     <label for="nivelAcesso">Nível de Acesso</label>
-                    <select name="nivelAcesso" id="nivelAcesso" value="<?php echo $row['nivelAcesso']; ?>" class="form-control">
+                    <select name="nivelAcesso" id="nivelAcesso" value="<?php echo $row['nivelAcesso']; ?>" class="form-control form-select">
                         <option value="Administrador">Administrador</option>
                         <option value="Usuario">Usuário</option>
                     </select><br>

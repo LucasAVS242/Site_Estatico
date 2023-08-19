@@ -46,7 +46,7 @@ require_once 'header.php';
                     <input type="password" name="senha" id="senha" class="form-control"><br>
 
                     <label for="nivelAcesso">Nível de Acesso</label><br>
-                    <select name="nivelAcesso" id="nivelAcesso" class="form-control">
+                    <select name="nivelAcesso" id="nivelAcesso" class="form-control form-select">
                         <option value="Administrador">Administrador</option>
                         <option value="Usuario">Usuário</option>
                     </select><br>

@@ -59,7 +59,7 @@ if ($result->num_rows > 0) {
                     echo "<td>" . $row['dataCadastro'] . "</td>";
                     echo "<td>" . $row['cadastradoPor'] . "</td>";
                     echo "<td><input type='submit' name='delete' value='DELETAR' class='btn btn-danger'/></td>";
-                    echo "<td><a href='editar-usuario.php?id=" . $row['idUsuario'] . "' class='btn btn-info'>EDITAR</a></td>";
+                    echo "<td><a style='background-color:#3cab7b; border:none; color:#fff;' href='editar-usuario.php?id=" . $row['idUsuario'] . "' class='btn btn-info'>EDITAR</a></td>";
                     echo "</tr>";
                     echo "</form>";
                 }

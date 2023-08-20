@@ -17,7 +17,7 @@ require_once 'header.php';
         ) {
             echo "<div class='alert alert-danger'>Por favor preencha todos os campos</div>";
         } else {
-
+            
             $nome = $_POST['nome'];
             $cnpj = $_POST['cnpj'];
             $email = $_POST['email'];

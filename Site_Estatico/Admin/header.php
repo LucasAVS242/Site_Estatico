@@ -22,6 +22,9 @@
     .container img {
       background-color: #eeeeee;
     }
+    a{
+      background:none;
+    }
   </style>
 </head>
 
@@ -44,9 +47,9 @@
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Cadastrar</a>
               <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="cadastrar-usuario.php">Usuário</a></li>
-                <li><a class="dropdown-item" href="../index.html">Cliente</a></li>
-                <li><a class="dropdown-item" href="../index.html">Serviços</a></li>
+                <li><a style="background:none;" class="dropdown-item" href="cadastrar-usuario.php">Usuário</a></li>
+                <li><a style="background:none;" class="dropdown-item" href="../index.html">Cliente</a></li>
+                <li><a style="background:none;" class="dropdown-item" href="../index.html">Serviços</a></li>
               </ul>
             </li>
             <li class="nav-item">
@@ -57,7 +60,7 @@
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Conta</a>
               <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="logout.php">Sair</a></li>
+                <li><a style="background:none;" class="dropdown-item" href="logout.php">Sair</a></li>
               </ul>
             </li>
           </ul>

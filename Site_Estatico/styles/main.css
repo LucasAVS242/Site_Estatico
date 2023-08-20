@@ -352,7 +352,7 @@ th {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 245px;
+    min-height: 70vh;
    
   }
 

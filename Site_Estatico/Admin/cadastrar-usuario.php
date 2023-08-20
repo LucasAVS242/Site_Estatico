@@ -15,7 +15,7 @@ require_once 'header.php';
         } else {
 
             $nomeUsuario = $_POST['nomeUsuario'];
-            $senha = $_POST['senha'];
+            $senha = md5($_POST['senha']);
             $nivelAcesso = $_POST['nivelAcesso'];
             $dataCadastro = $_POST['dataCadastro'];
             $cadastradoPor = $_POST['cadastradoPor'];

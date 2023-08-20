@@ -57,7 +57,7 @@ session_start();
 
     <?php
     $user = $_POST["usuario"];
-    $pass = $_POST["senha"];
+    $pass = md5($_POST["senha"]);
 
     // $pass = md5($pass);
 

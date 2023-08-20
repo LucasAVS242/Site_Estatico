@@ -48,7 +48,7 @@
               <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Cadastrar</a>
               <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                 <li><a style="background:none;" class="dropdown-item" href="cadastrar-usuario.php">Usuário</a></li>
-                <li><a style="background:none;" class="dropdown-item" href="#">Cliente</a></li>
+                <li><a style="background:none;" class="dropdown-item" href="cadastrar-cliente.php">Cliente</a></li>
                 <li><a style="background:none;" class="dropdown-item" href="#">Serviços</a></li>
               </ul>
             </li>

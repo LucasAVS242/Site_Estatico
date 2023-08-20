@@ -10,7 +10,7 @@ require_once'header.php';
             echo "<div class='alert alert-warning'>Por favor preencha todos os campos</div>";
         }else{
             $nomeUsuario = $_POST['nomeUsuario'];
-            $senha = $_POST['senha'];
+            $senha = md5($_POST['senha']);
             $nivelAcesso = $_POST['nivelAcesso'];
             $dataCadastro = $_POST['dataCadastro'];
             $cadastradoPor = $_POST['cadastradoPor'];
@@ -47,7 +47,7 @@ require_once'header.php';
                     <input type="username" id="nomeUsuario" name="nomeUsuario" value="<?php echo $row['nomeUsuario']; ?>" class="form-control"><br>
 
                     <label for="senha">Senha</label>
-                    <input type="password" name="senha" id="senha" value="<?php echo $row['senha']; ?>" class="form-control"><br>
+                    <input type="password" name="senha" id="senha" value="" class="form-control"><br>
 
                     <label for="nivelAcesso">Nível de Acesso</label>
                     <select name="nivelAcesso" id="nivelAcesso" value="<?php echo $row['nivelAcesso']; ?>" class="form-control form-select">

@@ -77,5 +77,6 @@ if ($result->num_rows > 0) {
         </div>
         </div>
     </main>
+    <p style="padding-bottom:13%;"></p>
     <?php
     require_once 'footer.php';

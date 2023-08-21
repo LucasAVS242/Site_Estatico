@@ -212,6 +212,10 @@ footer h4 {
         background: #198754 !important;
         border: none !important;
     }
+
+    ::placeholder {
+        color: #a1a1a1 !important;
+    }
 }
 
 #contato main h3 {

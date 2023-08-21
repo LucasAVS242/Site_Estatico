@@ -8,7 +8,7 @@ require_once 'header.php';
     <p>Usuário logado: <?php echo $_SESSION['usuario']; ?></p>
     <div class="container">
 
-        <img style="margin-top: 5%;" class="rounded" src="../images/LOGO BVM CONTABILIDADE(logo 2).png" width="1140" alt="">
+        <img style="margin-top: 5%; background:none;" class="rounded" src="../images/LOGO BVM CONTABILIDADE(logo 2).png" width="1140" alt="">
 
     </div>
     </div>

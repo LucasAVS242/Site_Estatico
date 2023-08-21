@@ -52,7 +52,7 @@ require_once 'header.php';
 
                     <div class="col-md-8">
                         <label for="nome">Nome</label>
-                        <input type="text" id="nome" name="nome" class="form-control"><br>
+                        <input type="text" id="nome" name="nome" class="form-control" maxlength="50"><br>
                     </div>
 
                     <div class="col-md-4">
@@ -62,22 +62,22 @@ require_once 'header.php';
 
                     <div class="col-md-6">
                         <label for="email">E-mail</label><br>
-                        <input type="email" name="email" id="email" class="form-control"><br>
+                        <input type="email" name="email" id="email" class="form-control" maxlength="50"><br>
                     </div>
 
                     <div class="col-md-6">
                         <label for="telefone">Telefone</label>
-                        <input type="text" name="telefone" id="telefone" class="form-control" maxlength="13"><br>
+                        <input type="tel" name="telefone" id="telefone" class="form-control" autocomplete="tel" maxlength="13"><br>
                     </div>
 
                     <div class="col-md-4">
                         <label for="cep">CEP</label>
-                        <input type="text" id="cep" name="cep" class="form-control" maxlength="10"><br>
+                        <input type="text" id="cep" name="cep" class="form-control" autocomplete="postal-code" maxlength="9"><br>
                     </div>
 
                     <div class="col-md-6">
                         <label for="cidade">Cidade</label>
-                        <input type="text" id="cidade" name="cidade" class="form-control"><br>
+                        <input type="text" id="cidade" name="cidade" class="form-control" maxlength="100"><br>
                     </div>
 
                     <div class="col-md-2">
@@ -116,12 +116,12 @@ require_once 'header.php';
 
                     <div class="col-12">
                         <label for="bairro">Bairro</label>
-                        <input type="text" id="bairro" name="bairro" class="form-control"><br>
+                        <input type="text" id="bairro" name="bairro" class="form-control" maxlength="100"><br>
                     </div>
 
                     <div class="col-12">
                         <label for="rua">Rua</label>
-                        <input type="text" id="rua" name="rua" class="form-control"><br>
+                        <input type="text" id="rua" name="rua" class="form-control" maxlength="100"><br>
                     </div>
 
                     <div class="col-md-6">

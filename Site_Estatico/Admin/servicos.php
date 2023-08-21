@@ -1,74 +1,81 @@
 <?php
+
 require_once 'connect.php';
 require_once 'header.php';
+
 ?>
 
-<div class="container">
-    <?php
-    if (isset($_POST['addnew'])) {
-
-        if (
-            empty($_POST['nome']) || empty($_POST['descricao']) ||
-            empty($_POST['valor']) || empty($_POST['dataCadastro']) || empty($_POST['cadastradoPor'])
-        ) {
-            echo "<div class='alert alert-danger'>Por favor preencha todos os campos</div>";
-        } else {
-
-            $nome = $_POST['nome'];
-            $descricao = $_POST['descricao'];
-            $observacao = $_POST['observacao'];
-            $valor = $_POST['valor'];
-            $cadastradoPor = $_POST['cadastradoPor'];
-            $dataCadastro = $_POST['dataCadastro'];
-
-            $sql = "INSERT INTO tbServico(nome,descricao,observacao,valor,dataCadastro,cadastradoPor)
-                VALUES('$nome','$descricao','$observacao','$valor','$dataCadastro','$cadastradoPor')";
-
-            if ($con->query($sql) === TRUE) {
-
-                echo "<div class='alert alert-success'>Serviço adicionado com sucesso</div>";
-            } else {
-                echo "<div class='alert alert-danger'>Erro: Ocorreu um erro ao atualizar a informação do serviço</div>";
-            }
-        }
-    }
-
-    ?>
-
-    <div class="row">
-        <div class="col-md-6 col-md-offset-3">
-            <div class="box">
-                <h3><i class="fa-solid fa-plus"></i>&nbsp;Cadastrar serviço</h3>
-                <form action="" method="POST">
-                    <label for="nome">Serviço</label>
-                    <input type="text" id="nome" name="nome" class="form-control"><br>
-
-                    <label for="descricao">descrição</label>
-                    <textarea type="text" name="descricao" id="descricao" class="form-control"  rows="2" ></textarea><br>
-
-                    <label for="observacao">Observação</label>
-                    <textarea type="text" name="observacao" id="observacao" class="form-control" rows="3" ></textarea><br>
-                   <!-- <input type="text" name="descricao" id="descricao" class="form-control"><br>-->
-
-                    <label for="valor">Valor</label><br>
-                    <input type="number" min="1" step="any" name="valor" id="valor"class="form-control"><br>
-
-                    <label for="dataCadastro">Data de Cadastro</label>
-                    <input type="text" name="dataCadastro" id="dataCadastro" class="form-control read-only" value="<?php echo date("d/m/Y") ?>" readonly><br>
-
-                    <label for="cadastradoPor">Cadastrado Por</label>
-                    <input type="text" name="cadastradoPor" id="cadastradoPor" class="form-control read-only" value="<?php echo $_SESSION["usuario"] ?>" readonly><br>
-
-                    <br>
-
-                    <input type="submit" name="addnew" class="btn btn-success" value="Adicionar">
-
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
 
 <?php
+if (isset($_POST['delete'])) {
+    $sql = "DELETE FROM tbServico WHERE idServico=" . $_POST['idServico'];
 
-require_once 'footer.php';
+    if ($con->query($sql) === TRUE) {
+        echo "<br><div class='container alert alert-success'>Serviço deletado com sucesso</div>";
+    }
+}
+$sql = "SELECT * FROM tbServico";
+$result = $con->query($sql);
+
+if ($result->num_rows > 0) {
+?>
+    <main id="Serviços">
+        <div class="container">
+            <h2><i class="fa-solid fa-user"></i>&nbsp;Lista de Serviços</h2>
+            <form style="all: unset;" action="" method="get">
+                <div class="input-group mb-3">
+                    <span class="input-group-text"><i class="fa-solid fa-magnifying-glass"></i></span>
+                    <input type="text" name="pesquisar" value="<?php if (isset($_GET['pesquisar'])) echo $_GET['pesquisar']; ?>" class="form-control" placeholder="Pesquisar">
+                    <button type="submit" class="btn btn-success">Pesquisar</button>
+                </div>
+            </form>
+            <table class="table table-bordered table-striped">
+                <tr>
+                    <th>ID</th>
+                    <th>Serviço</th>
+                    <th>Descrição</th>
+                    <th>Observação</th>
+                    <th>Valor</th>
+                    <th>Data de Cadastro</th>
+                    <th>Cadastrado Por</th>
+                    <th width="70px">Deletar</th>
+                    <th width="70px">Editar</th>
+
+                </tr>
+
+                <?php
+                if (isset($_GET['pesquisar'])) {
+                    $filtervalues = $_GET['pesquisar'];
+                    $query = "SELECT * FROM tbServico WHERE CONCAT(idServico,nome,descricao,observacao,cadastradoPor,dataCadastro) LIKE '%$filtervalues%' ";
+                    $result = mysqli_query($con, $query);
+                }
+
+
+                while ($row = $result->fetch_assoc()) {
+                    echo "<form action='' method='POST'>";
+                    echo "<input type='hidden' value='" . $row['idUsuario'] . "' name='idUsuario' />";
+                    echo "<tr>";
+                    echo "<td>" . $row['idServico'] . "</td>";
+                    echo "<td>" . $row['nome'] . "</td>";
+                    echo "<td>" . $row['descricao'] . "</td>";
+                    echo "<td>" . $row['observacao'] . "</td>";
+                    echo "<td>" . $row['valor'] . "</td>";
+                    echo "<td>" . $row['dataCadastro'] . "</td>";
+                    echo "<td>" . $row['cadastradoPor'] . "</td>";
+                    echo "<td><input type='submit' name='delete' value='DELETAR' class='btn btn-danger'/></td>";
+                    echo "<td><a style='background-color:#3cab7b; border:none; color:#fff;' href='editar-servico.php?id=" . $row['idServico'] . "' class='btn btn-info'>EDITAR</a></td>";
+                    echo "</tr>";
+                    echo "</form>";
+                }
+                ?>
+            </table>
+        <?php
+    } else {
+        echo "<br><br><div class='alert alert-warning'>Nenhum registro encontrado</div>";
+    }
+        ?>
+        </div>
+        </div>
+    </main>
+    <?php
+    require_once 'footer.php';

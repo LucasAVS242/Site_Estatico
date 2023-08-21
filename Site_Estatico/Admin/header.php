@@ -49,11 +49,16 @@
               <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                 <li><a style="background:none;" class="dropdown-item" href="cadastrar-usuario.php">Usuário</a></li>
                 <li><a style="background:none;" class="dropdown-item" href="cadastrar-cliente.php">Cliente</a></li>
-                <li><a style="background:none;" class="dropdown-item" href="servicos.php">Serviços</a></li>
+                <li><a style="background:none;" class="dropdown-item" href="cadastrar-servicos.php">Serviços</a></li>
               </ul>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="usuarios.php">Registros</a>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Registros</a>
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                <li><a style="background:none;" class="dropdown-item" href="usuarios.php">Usuário</a></li>
+                <li><a style="background:none;" class="dropdown-item" href="cliente.php">Cliente</a></li>
+                <li><a style="background:none;" class="dropdown-item" href="servicos.php">Serviços</a></li>
+              </ul>
             </li>
           </ul>
           <ul class="navbar-nav ms-auto">

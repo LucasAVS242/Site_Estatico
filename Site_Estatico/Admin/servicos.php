@@ -35,7 +35,7 @@ if ($result->num_rows > 0) {
                     <th>Serviço</th>
                     <th>Descrição</th>
                     <th>Observação</th>
-                    ]<th>Valor</th>
+                    <th>Valor</th>
                     <th>Data de Cadastro</th>
                     <th>Cadastrado Por</th>
                     <th width="70px">Deletar</th>

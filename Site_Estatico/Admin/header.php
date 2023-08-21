@@ -49,7 +49,7 @@
               <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                 <li><a style="background:none;" class="dropdown-item" href="cadastrar-usuario.php">Usuário</a></li>
                 <li><a style="background:none;" class="dropdown-item" href="cadastrar-cliente.php">Cliente</a></li>
-                <li><a style="background:none;" class="dropdown-item" href="#">Serviços</a></li>
+                <li><a style="background:none;" class="dropdown-item" href="servicos.php">Serviços</a></li>
               </ul>
             </li>
             <li class="nav-item">

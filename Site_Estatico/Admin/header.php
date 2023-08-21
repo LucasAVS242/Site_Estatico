@@ -17,6 +17,7 @@
   <script src="Components/footer.js" type="text/javascript" defer></script>
   <script src="Components/btn.js" type="text/javascript" defer></script>
   <script src="Components/LoginModal.js" type="text/javascript" defer></script>
+  <script src="../Components/cep.js" type="text/javascript"></script>
 
   <style>
     .container img {

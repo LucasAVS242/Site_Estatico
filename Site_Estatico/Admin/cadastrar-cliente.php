@@ -70,6 +70,16 @@ require_once 'header.php';
                         <input type="text" name="telefone" id="telefone" class="form-control" maxlength="13"><br>
                     </div>
 
+                    <div class="col-md-4">
+                        <label for="cep">CEP</label>
+                        <input type="text" id="cep" name="cep" class="form-control" maxlength="10"><br>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="cidade">Cidade</label>
+                        <input type="text" id="cidade" name="cidade" class="form-control"><br>
+                    </div>
+
                     <div class="col-md-2">
                         <label for="estado">Estado</label>
                         <select id="estado" name="estado" class="form-control form-select">
@@ -102,16 +112,6 @@ require_once 'header.php';
                             <option value="SE">SE</option>
                             <option value="TO">TO</option>
                         </select><br>
-                    </div>
-
-                    <div class="col-md-6">
-                        <label for="cidade">Cidade</label>
-                        <input type="text" id="cidade" name="cidade" class="form-control"><br>
-                    </div>
-
-                    <div class="col-md-4">
-                        <label for="cep">CEP</label>
-                        <input type="text" id="cep" name="cep" class="form-control"><br>
                     </div>
 
                     <div class="col-12">

@@ -43,7 +43,7 @@ require_once 'header.php';
                     <label for="nome">Serviço</label>
                     <input type="text" id="nome" name="nome" class="form-control"><br>
 
-                    <label for="descricao">descrição</label>
+                    <label for="descricao">Descrição</label>
                     <textarea type="text" name="descricao" id="descricao" class="form-control"  rows="2" ></textarea><br>
 
                     <label for="observacao">Observação</label>

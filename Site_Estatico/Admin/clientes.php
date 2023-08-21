@@ -43,8 +43,8 @@ if ($result->num_rows > 0) {
                     <th>Rua</th>
                     <th>Data de Cadastro</th>
                     <th>Cadastrado Por</th>
-                    <th width="70px">Deletar</th>
-                    <th width="70px">Editar</th>
+                    <th>Deletar</th>
+                    <th>Editar</th>
 
                 </tr>
 
@@ -73,7 +73,7 @@ if ($result->num_rows > 0) {
                     echo "<td>". $row['dataCadastro']. "</td>";
                     echo "<td>" . $row['cadastradoPor'] . "</td>";
                     echo "<td><input type='submit' name='delete' value='DELETAR' class='btn btn-danger'/></td>";
-                    echo "<td><a style='background-color:#3cab7b; border:none; color:#fff;' href='editar-usuario.php?id=" . $row['idCliente'] . "' class='btn btn-info'>EDITAR</a></td>";
+                    echo "<td><a style='background-color:#3cab7b; border:none; color:#fff;' href='editar-cliente.php?id=" . $row['idCliente'] . "' class='btn btn-info'>EDITAR</a></td>";
                     echo "</tr>";
                     echo "</form>";
                 }

@@ -21,6 +21,7 @@
 
 * {
     font-family: Lato;
+    text-align: justify;
 }
 
 
@@ -235,7 +236,7 @@ footer h4 {
 }
 
 img.rounded-corners {
-    border-radius: 75px;
+    border-radius: 9%;
 }
 
 #contato .container:last-child,form {

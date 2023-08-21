@@ -10,7 +10,7 @@
           <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
   
             
-              <img src="../images/LOGO BVM CONTABILIDADE(logo).png" height="70" alt=""
+              <img style="background:none" src="../images/LOGO BVM CONTABILIDADE(logo).png" height="70" alt=""
                    loading="lazy" />
             
   

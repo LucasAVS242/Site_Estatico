@@ -5,19 +5,17 @@ require_once 'header.php';
 
 <div class="container">
     <?php
-        if(isset($_POST['update'])){
-
-            if (
-                empty($_POST['nome']) || empty($_POST['cnpj']) ||
-                empty($_POST['email']) || empty($_POST['telefone']) ||
-                empty($_POST['estado']) || empty($_POST['cidade']) ||
-                empty($_POST['cep']) || empty($_POST['bairro']) ||
-                empty($_POST['rua']) || empty($_POST['telefone']) ||
-                empty($_POST['dataCadastro'] || empty($_POST['cadastradoPor']))
-            )
-        {
+    if (isset($_POST['update'])) {
+        if (
+            empty($_POST['nome']) || empty($_POST['cnpj']) ||
+            empty($_POST['email']) || empty($_POST['telefone']) ||
+            empty($_POST['estado']) || empty($_POST['cidade']) ||
+            empty($_POST['cep']) || empty($_POST['bairro']) ||
+            empty($_POST['rua']) || empty($_POST['telefone']) ||
+            empty($_POST['dataCadastro'] || empty($_POST['cadastradoPor']))
+        ) {
             echo "<div class='alert alert-warning'>Por favor preencha todos os campos</div>";
-        }else{
+        } else {
 
             $nome = $_POST['nome'];
             $cnpj = $_POST['cnpj'];
@@ -32,12 +30,12 @@ require_once 'header.php';
             $cadastradoPor = $_POST['cadastradoPor'];
             $sql = "UPDATE tbCliente SET nome='{$nome}', cnpj='{$cnpj}', email='{$email}', telefone='{$telefone}', 
             estado='{$estado}', cidade='{$cidade}', cep='{$cep}', bairro='{$bairro}', rua='{$rua}', 
-            dataCadastro='{$dataCadastro}', cadastradoPor='{$cadastradoPor}' WHERE idCliente=". $_POST['idCliente'];
+            dataCadastro='{$dataCadastro}', cadastradoPor='{$cadastradoPor}' WHERE idCliente=" . $_POST['idCliente'];
 
-            if($con->query($sql) === TRUE){
+            if ($con->query($sql) === TRUE) {
                 echo "<div class='alert alert-success'>Cliente atualizado com sucesso</div>";
-            }else{
-                echo"<div class='alert alert-danger'>Erro: Ocorreu um erro ao atualizar as informações do cliente</div>";
+            } else {
+                echo "<div class='alert alert-danger'>Erro: Ocorreu um erro ao atualizar as informações do cliente</div>";
             }
         }
     }
@@ -46,7 +44,7 @@ require_once 'header.php';
     $sql = "SELECT * FROM tbCliente WHERE idCliente={$id}";
     $result = $con->query($sql);
 
-    if($result->num_rows < 1){
+    if ($result->num_rows < 1) {
         header('Location: index.php');
         exit;
     }
@@ -59,10 +57,11 @@ require_once 'header.php';
             <div class="box">
                 <h3><i class="fa-solid fa-pen-to-square"></i>&nbsp;Editar Cliente</h3><br>
                 <form action="" method="POST" class="row g-3">
+                    <input type="hidden" value="<?php echo $row['idCliente']; ?>" name="idCliente">
 
                     <div class="col-md-8">
                         <label for="nome">Nome</label>
-                        <input type="text" id="nome" name="nome" value="<?php echo $row['nome']; ?>" class="form-control" maxlength="50" ><br>
+                        <input type="text" id="nome" name="nome" value="<?php echo $row['nome']; ?>" class="form-control" maxlength="50"><br>
                     </div>
 
                     <div class="col-md-4">
@@ -147,7 +146,7 @@ require_once 'header.php';
                     <br>
 
                     <div class="col-12">
-                    <input type="submit" name="update" class="btn btn-success" value="Atualizar">
+                        <input type="submit" name="update" class="btn btn-success" value="Atualizar">
                     </div>
                 </form>
             </div>
@@ -156,4 +155,4 @@ require_once 'header.php';
 </div>
 
 <?php
-require_once'footer.php';
+require_once 'footer.php';

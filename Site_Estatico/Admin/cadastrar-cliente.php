@@ -57,7 +57,7 @@ require_once 'header.php';
 
                     <div class="col-md-4">
                         <label for="cnpj">CNPJ</label>
-                        <input type="text" name="cnpj" id="cnpj" class="form-control"><br>
+                        <input type="text" name="cnpj" id="cnpj" class="form-control" maxlength="14"><br>
                     </div>
 
                     <div class="col-md-6">
@@ -67,7 +67,7 @@ require_once 'header.php';
 
                     <div class="col-md-6">
                         <label for="telefone">Telefone</label>
-                        <input type="text" name="telefone" id="telefone" class="form-control"><br>
+                        <input type="text" name="telefone" id="telefone" class="form-control" maxlength="13"><br>
                     </div>
 
                     <div class="col-md-2">

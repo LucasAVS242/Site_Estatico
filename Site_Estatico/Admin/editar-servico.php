@@ -48,7 +48,7 @@ require_once'header.php';
                     <input type="text" id="nome" name="nome" value="<?php echo $row['nome']; ?>" class="form-control"<br>
 
                     <label for="descricao">descrição</label>
-                    <textarea type="text" name="descricao" id="descricao" value="<?php echo $row['descricao']; ?>" class="form-control"  rows="2" ></textarea><br>
+                    <textarea type="text" name="descricao" id="descricao" class="form-control"  rows="2" value="<?php echo $row['descricao']; ?>"></textarea><br>
 
                     <label for="observacao">Observação</label>
                     <textarea type="text" name="observacao" id="observacao" value="<?php echo $row['observacao']; ?>" class="form-control" rows="3" ></textarea><br>

@@ -9,26 +9,26 @@ require_once 'header.php';
 
         if (
             empty($_POST['nome']) || empty($_POST['descricao']) ||
-            empty($_POST['valor']) || empty($_POST['dataCadastro']) || empty($_POST['cadastraoPor'])
+            empty($_POST['valor']) || empty($_POST['dataCadastro']) || empty($_POST['cadastradoPor'])
         ) {
             echo "<div class='alert alert-danger'>Por favor preencha todos os campos</div>";
         } else {
 
             $nome = $_POST['nome'];
-            $descricao = md5($_POST['descricao']);
+            $descricao = $_POST['descricao'];
             $observacao = $_POST['observacao'];
             $valor = $_POST['valor'];
             $cadastradoPor = $_POST['cadastradoPor'];
             $dataCadastro = $_POST['dataCadastro'];
 
             $sql = "INSERT INTO tbServico(nome,descricao,observacao,valor,dataCadastro,cadastradoPor)
-                VALUES('$nomeUsuario','$senha','$nivelAcesso','$dataCadastro','$cadastradoPor')";
+                VALUES('$nome','$descricao','$observacao','$valor','$dataCadastro','$cadastradoPor')";
 
             if ($con->query($sql) === TRUE) {
 
-                echo "<div class='alert alert-success'>Usuário adicionado com sucesso</div>";
+                echo "<div class='alert alert-success'>Serviço adicionado com sucesso</div>";
             } else {
-                echo "<div class='alert alert-danger'>Erro: Ocorreu um erro ao atualizar a informação do usuário</div>";
+                echo "<div class='alert alert-danger'>Erro: Ocorreu um erro ao atualizar a informação do serviço</div>";
             }
         }
     }
@@ -44,10 +44,10 @@ require_once 'header.php';
                     <input type="text" id="nome" name="nome" class="form-control"><br>
 
                     <label for="descricao">descrição</label>
-                    <textarea id="descricao" rows="2" id="descricao" class="form-control"></textarea>
+                    <textarea type="text" name="descricao" id="descricao" class="form-control"  rows="2" ></textarea>
 
                     <label for="observacao">Observação</label>
-                    <textarea id="observacao" rows="3" id="observacao" class="form-control"></textarea>
+                    <textarea type="text" name="observacao" id="observacao" class="form-control" rows="3" ></textarea>
                    <!-- <input type="text" name="descricao" id="descricao" class="form-control"><br>-->
 
                     <label for="valor">Valor</label><br>

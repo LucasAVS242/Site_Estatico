@@ -25,9 +25,9 @@ require_once 'header.php';
 
             if ($con->query($sql) === TRUE) {
 
-                echo "<div class='alert alert-success'>Usuário adicionado com sucesso</div>";
+                echo "<div class='alert alert-success'>Usuário cadastrado com sucesso</div>";
             } else {
-                echo "<div class='alert alert-danger'>Erro: Ocorreu um erro ao atualizar a informação do usuário</div>";
+                echo "<div class='alert alert-danger'>Erro: Ocorreu um erro ao cadastrar a informação do usuário</div>";
             }
         }
     }
@@ -59,7 +59,7 @@ require_once 'header.php';
 
                     <br>
 
-                    <input type="submit" name="addnew" class="btn btn-success" value="Adicionar">
+                    <input type="submit" name="addnew" class="btn btn-success" value="Cadastrar">
 
                 </form>
             </div>

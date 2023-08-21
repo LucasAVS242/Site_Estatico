@@ -19,7 +19,7 @@ $result = $con->query($sql);
 
 if ($result->num_rows > 0) {
 ?>
-    <main id="Usuarios">
+    <main id="registros">
         <div class="container">
             <h2><i class="fa-solid fa-user"></i>&nbsp;Lista de Usuários</h2>
             <form style="all: unset;" action="" method="get">

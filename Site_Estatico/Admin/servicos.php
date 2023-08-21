@@ -19,7 +19,7 @@ $result = $con->query($sql);
 
 if ($result->num_rows > 0) {
 ?>
-    <main id="Serviços">
+    <main id="registros">
         <div class="container">
             <h2><i class="fa-solid fa-user"></i>&nbsp;Lista de Serviços</h2>
             <form style="all: unset;" action="" method="get">
@@ -53,7 +53,7 @@ if ($result->num_rows > 0) {
 
                 while ($row = $result->fetch_assoc()) {
                     echo "<form action='' method='POST'>";
-                    echo "<input type='hidden' value='" . $row['idUsuario'] . "' name='idUsuario' />";
+                    echo "<input type='hidden' value='" . $row['idServico'] . "' name='idServico' />";
                     echo "<tr>";
                     echo "<td>" . $row['idServico'] . "</td>";
                     echo "<td>" . $row['nome'] . "</td>";

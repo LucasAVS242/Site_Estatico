@@ -17,7 +17,7 @@ require_once 'header.php';
         ) {
             echo "<div class='alert alert-danger'>Por favor preencha todos os campos</div>";
         } else {
-            
+
             $nome = $_POST['nome'];
             $cnpj = $_POST['cnpj'];
             $email = $_POST['email'];
@@ -30,7 +30,7 @@ require_once 'header.php';
             $dataCadastro = $_POST['dataCadastro'];
             $cadastradoPor = $_POST['cadastradoPor'];
 
-            $sql = "INSERT INTO tbUsuario(nome,cnpj,email,telefone,estado,cidade,cep,bairro,rua,dataCadastro,cadastradoPor)
+            $sql = "INSERT INTO tbCliente(nome,cnpj,email,telefone,estado,cidade,cep,bairro,rua,dataCadastro,cadastradoPor)
                 VALUES('$nome','$cnpj','$email','$telefone','$estado','$cidade','$cep','$bairro','$rua','$dataCadastro','$cadastradoPor')";
 
             if ($con->query($sql) === TRUE) {

@@ -44,10 +44,10 @@ require_once 'header.php';
                     <input type="text" id="nome" name="nome" class="form-control"><br>
 
                     <label for="descricao">descrição</label>
-                    <textarea type="text" name="descricao" id="descricao" class="form-control"  rows="2" ></textarea>
+                    <textarea type="text" name="descricao" id="descricao" class="form-control"  rows="2" ></textarea><br>
 
                     <label for="observacao">Observação</label>
-                    <textarea type="text" name="observacao" id="observacao" class="form-control" rows="3" ></textarea>
+                    <textarea type="text" name="observacao" id="observacao" class="form-control" rows="3" ></textarea><br>
                    <!-- <input type="text" name="descricao" id="descricao" class="form-control"><br>-->
 
                     <label for="valor">Valor</label><br>

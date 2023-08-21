@@ -51,7 +51,7 @@ require_once 'header.php';
                    <!-- <input type="text" name="descricao" id="descricao" class="form-control"><br>-->
 
                     <label for="valor">Valor</label><br>
-                    <input type="text" name="valor" id="valor"class="form-control"><br>
+                    <input type="number" min="1" step="any" name="valor" id="valor"class="form-control"><br>
 
                     <label for="dataCadastro">Data de Cadastro</label>
                     <input type="text" name="dataCadastro" id="dataCadastro" class="form-control read-only" value="<?php echo date("d/m/Y") ?>" readonly><br>

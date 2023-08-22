@@ -26,6 +26,9 @@
     a{
       background:none;
     }
+    .alert {
+      text-align: center;
+    }
   </style>
 </head>
 

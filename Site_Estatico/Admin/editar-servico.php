@@ -45,9 +45,9 @@ require_once'header.php';
                     <input type="hidden" value="<?php echo $row['idServico'];?>" name="idServico">
 
                     <label for="nome">Serviço</label>
-                    <input type="text" id="nome" name="nome" value="<?php echo $row['nome']; ?>" class="form-control"<br>
+                    <input type="text" id="nome" name="nome" value="<?php echo $row['nome']; ?>" class="form-control"><br>
 
-                    <label for="descricao">descrição</label>
+                    <label for="descricao">Descrição</label>
                     <textarea type="text" name="descricao" id="descricao" class="form-control"  rows="2" value="<?php echo $row['descricao']; ?>"></textarea><br>
 
                     <label for="observacao">Observação</label>

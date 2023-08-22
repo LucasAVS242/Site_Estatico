@@ -21,7 +21,7 @@ if ($result->num_rows > 0) {
 ?>
     <main id="registros">
         <div class="container">
-            <h2><i class="fa-solid fa-user"></i>&nbsp;Lista de Serviços</h2>
+            <h2><i class="fa-regular fa-clipboard"></i>&nbsp;Lista de Serviços</h2>
             <form style="all: unset;" action="" method="get">
                 <div class="input-group mb-3">
                     <span class="input-group-text"><i class="fa-solid fa-magnifying-glass"></i></span>

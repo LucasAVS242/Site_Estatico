@@ -25,7 +25,7 @@
             <ul class="list-unstyled">
           
                 <li>
-                  <p><a href="cadastrar-usuario.php">Usuario</a></p>
+                  <p><a href="cadastrar-usuario.php">Usuário</a></p>
                 </li>
                 <li>
                   <p><a href="cadastrar-cliente.php">Cliente</a></p>
@@ -44,7 +44,7 @@
   
             <ul class="list-unstyled footer-link">
             <li>
-                  <p><a href="usuarios.php">Usuario</a></p>
+                  <p><a href="usuarios.php">Usuário</a></p>
                 </li>
                 <li>
                   <p><a href="clientes.php">Cliente</a></p>

@@ -21,7 +21,7 @@ if ($result->num_rows > 0) {
             <form style="all: unset;" action="" method="get">
                 <div class="input-group mb-3">
                     <span class="input-group-text"><i class="fa-solid fa-magnifying-glass"></i></span>
-                    <input type="text" name="pesquisar" value="<?php if (isset($_GET['pesquisar'])) echo $_GET['pesquisar']; ?>" class="form-control" placeholder="Pesquisar">
+                    <input type="search" name="pesquisar" value="<?php if (isset($_GET['pesquisar'])) echo $_GET['pesquisar']; ?>" class="form-control" placeholder="Pesquisar">
                     <button type="submit" class="btn btn-success">Pesquisar</button>
                 </div>
             </form>

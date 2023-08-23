@@ -14,9 +14,9 @@
 
     <link rel="stylesheet" href="../styles/main.css" type="text/css">
 
-  <script src="Components/footer.js" type="text/javascript" defer></script>
-  <script src="Components/btn.js" type="text/javascript" defer></script>
-  <script src="Components/LoginModal.js" type="text/javascript" defer></script>
+  <script src="../Components/footer.js" type="text/javascript" defer></script>
+  <script src="../Components/btn.js" type="text/javascript" defer></script>
+  <script src="../Components/LoginModal.js" type="text/javascript" defer></script>
   <script src="../Components/cep.js" type="text/javascript"></script>
 
   <style>
@@ -33,6 +33,8 @@
 </head>
 
 <body>
+
+<button onclick="topFunction()" id="myBtn" title="ir para o começo">&#129093;</button>
 
   <header>
     <nav class="navbar navbar-expand-lg bg-light">

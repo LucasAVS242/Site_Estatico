@@ -7,13 +7,6 @@ require_once 'header.php';
 
 
 <?php
-if (isset($_POST['delete'])) {
-    $sql = "DELETE FROM tbServico WHERE idServico=" . $_POST['idServico'];
-
-    if ($con->query($sql) === TRUE) {
-        echo "<br><div class='container alert alert-success'>Serviço deletado com sucesso</div>";
-    }
-}
 $sql = "SELECT * FROM tbServico";
 $result = $con->query($sql);
 
@@ -43,7 +36,6 @@ if ($result->num_rows > 0) {
                         <th>Valor</th>
                         <th>Data de Cadastro</th>
                         <th>Cadastrado Por</th>
-                        <th width="70px">Deletar</th>
                         <th width="70px">Editar</th>
                     </tr>
                 </thead>
@@ -67,8 +59,7 @@ if ($result->num_rows > 0) {
                         echo "<td>" . $row['valor'] . "</td>";
                         echo "<td>" . $row['dataCadastro'] . "</td>";
                         echo "<td>" . $row['cadastradoPor'] . "</td>";
-                        echo "<td><input type='submit' name='delete' value='DELETAR' class='btn btn-danger'/></td>";
-                        echo "<td><a style='background-color:#3cab7b; border:none; color:#fff;' href='editar-servico.php?id=" . $row['idServico'] . "' class='btn btn-info'>EDITAR</a></td>";
+                        echo "<td><a style='background-color:#3cab7b; border:none; color:#fff;' href='editar-servico.php?id=" . $row['idServico'] . "' class='btn btn-info'><i class='fa-solid fa-pen-to-square'></i></a></td>";
                         echo "</tr>";
                         echo "</form>";
                     }

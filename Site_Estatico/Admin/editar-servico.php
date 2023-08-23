@@ -4,6 +4,14 @@ require_once'header.php';
 ?>
 <div class="container">
     <?php
+    if (isset($_POST['delete'])) {
+        $sql = "DELETE FROM tbServico WHERE idServico=" . $_POST['idServico'];
+    
+        if ($con->query($sql) === TRUE) {
+            echo "<script>alert('Serviço deletado com sucesso');window.location='servicos.php';</script>";
+        }
+    }
+
         if(isset($_POST['update'])){
             if(empty($_POST['nome']) || empty($_POST['descricao']) || empty($_POST['valor']) || empty($_POST['dataCadastro']) || empty($_POST['cadastradoPor']) )
         {
@@ -30,8 +38,7 @@ require_once'header.php';
     $result = $con->query($sql);
 
     if($result->num_rows < 1){
-        header('Location: index.php');
-        exit;
+        echo "<script>alert('Erro: Serviço não existe no banco de dados');window.location='servicos.php';</script>";
     }
 
     $row = $result->fetch_assoc();
@@ -66,6 +73,7 @@ require_once'header.php';
                     <br>
 
                     <input type="submit" name="update" class="btn btn-success" value="Atualizar">
+                    <button type="submit" name="delete" class="btn btn-danger">Deletar</button>
                 </form>
             </div>
         </div>

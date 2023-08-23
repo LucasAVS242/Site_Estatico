@@ -5,6 +5,14 @@ require_once 'header.php';
 
 <div class="container">
     <?php
+    if (isset($_POST['delete'])) {
+        $sql = "DELETE FROM tbCliente WHERE idCliente=" . $_POST['idCliente'];
+    
+        if ($con->query($sql) === TRUE) {
+            echo "<script>alert('Cliente deletado com sucesso');window.location='clientes.php';</script>";
+        }
+    }
+
     if (isset($_POST['update'])) {
         if (
             empty($_POST['nome']) || empty($_POST['cnpj']) ||
@@ -45,8 +53,10 @@ require_once 'header.php';
     $result = $con->query($sql);
 
     if ($result->num_rows < 1) {
-        header('Location: index.php');
-        exit;
+        /* header('Location: index.php');
+        exit; */
+
+        echo "<script>alert('Erro: Cliente não existe no banco de dados');window.location='clientes.php';</script>";
     }
 
     $row = $result->fetch_assoc();
@@ -147,6 +157,7 @@ require_once 'header.php';
 
                     <div class="col-12">
                         <input type="submit" name="update" class="btn btn-success" value="Atualizar">
+                        <button type="submit" name="delete" class="btn btn-danger">Deletar</button>
                     </div>
                 </form>
             </div>

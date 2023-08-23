@@ -7,13 +7,6 @@ require_once 'header.php';
 
 
 <?php
-if (isset($_POST['delete'])) {
-    $sql = "DELETE FROM tbCliente WHERE idCliente=" . $_POST['idCliente'];
-
-    if ($con->query($sql) === TRUE) {
-        echo "<br><div class='container alert alert-success'>Cliente deletado com sucesso</div>";
-    }
-}
 $sql = "SELECT * FROM tbCliente";
 $result = $con->query($sql);
 
@@ -21,7 +14,7 @@ if ($result->num_rows > 0) {
 ?>
     <main id="registros">
 
-        <div class="container">
+        <div class="container-fluid">
             <h2><i class="fa-solid fa-user"></i>&nbsp;Lista de Clientes</h2>
 
             <!-- Caixa de pesquisa -->
@@ -48,8 +41,8 @@ if ($result->num_rows > 0) {
                         <th>Rua</th>
                         <th>Data de Cadastro</th>
                         <th>Cadastrado Por</th>
-                        <th width="70px">Deletar</th>
-                        <th width="70px">Editar</th>
+                        <th>Edição</th>
+                        
                     </tr>
                 </thead>
 
@@ -77,8 +70,7 @@ if ($result->num_rows > 0) {
                         echo "<td>" . $row['rua'] . "</td>";
                         echo "<td>" . $row['dataCadastro'] . "</td>";
                         echo "<td>" . $row['cadastradoPor'] . "</td>";
-                        echo "<td><input type='submit' name='delete' value='DELETAR' class='btn btn-danger'/></td>";
-                        echo "<td><a style='background-color:#3cab7b; border:none; color:#fff;' href='editar-cliente.php?id=" . $row['idCliente'] . "' class='btn btn-info'>EDITAR</a></td>";
+                        echo "<td><a style='background-color:#3cab7b; border:none; color:#fff;' href='editar-cliente.php?id=" . $row['idCliente'] . "' class='btn btn-info'><i class='fa-solid fa-pen-to-square'></i></a></td>";
                         echo "</tr>";
                         echo "</form>";
                     }

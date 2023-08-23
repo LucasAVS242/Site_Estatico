@@ -4,6 +4,14 @@ require_once'header.php';
 ?>
 <div class="container">
     <?php
+    if (isset($_POST['delete'])) {
+        $sql = "DELETE FROM tbUsuario WHERE idUsuario=" . $_POST['idUsuario'];
+    
+        if ($con->query($sql) === TRUE) {
+            echo "<script>alert('Usuário deletado com sucesso');window.location='usuarios.php';</script>";
+        }
+    }
+
         if(isset($_POST['update'])){
             if(empty($_POST['nomeUsuario']) || empty($_POST['senha']) || empty($_POST['nivelAcesso']) || empty($_POST['dataCadastro']) || empty($_POST['cadastradoPor']) )
         {
@@ -29,8 +37,7 @@ require_once'header.php';
     $result = $con->query($sql);
 
     if($result->num_rows < 1){
-        header('Location: index.php');
-        exit;
+        echo "<script>alert('Erro: Usuário não existe no banco de dados');window.location='usuarios.php';</script>";
     }
 
     $row = $result->fetch_assoc();
@@ -64,6 +71,7 @@ require_once'header.php';
                     <br>
 
                     <input type="submit" name="update" class="btn btn-success" value="Atualizar">
+                    <button type="submit" name="delete" class="btn btn-danger">Deletar</button>
                 </form>
             </div>
         </div>

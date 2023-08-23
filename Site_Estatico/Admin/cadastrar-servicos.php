@@ -38,7 +38,7 @@ require_once 'header.php';
     <div class="row">
         <div class="col-md-6 col-md-offset-3">
             <div class="box">
-                <h3><i class="fa-solid fa-plus"></i>&nbsp;Cadastrar serviço</h3>
+                <h3><i class="fa-solid fa-plus"></i>&nbsp;Cadastrar Serviço</h3>
                 <form action="" method="POST">
                     <label for="nome">Serviço</label>
                     <input type="text" id="nome" name="nome" class="form-control"><br>

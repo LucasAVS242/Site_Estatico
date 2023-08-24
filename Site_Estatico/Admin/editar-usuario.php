@@ -71,7 +71,7 @@ require_once'header.php';
                     <br>
 
                     <input type="submit" name="update" class="btn btn-success" value="Atualizar">
-                    <button type="submit" name="delete" class="btn btn-danger">Deletar</button>
+                    <button type="submit" name="delete" class="btn btn-danger" <?php if ($row['idUsuario'] === '1') echo 'disabled'; ?>>Deletar</button>
                 </form>
             </div>
         </div>

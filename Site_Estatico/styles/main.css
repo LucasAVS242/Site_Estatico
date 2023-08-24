@@ -288,6 +288,17 @@ th {
     color: #fff !important;
 }
 
+.btn-editar {
+    background-color:#3cab7b; 
+    border:none; 
+    color:#fff;
+}
+
+.btn-editar:hover {
+    background-color: #247454;
+    color: #fff;
+}
+
 .read-only {
     color: gray !important;
 }

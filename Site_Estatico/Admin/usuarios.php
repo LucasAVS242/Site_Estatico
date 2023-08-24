@@ -55,7 +55,17 @@ if ($result->num_rows > 0) {
                         echo "<td>" . $row['nivelAcesso'] . "</td>";
                         echo "<td>" . $row['dataCadastro'] . "</td>";
                         echo "<td>" . $row['cadastradoPor'] . "</td>";
-                        echo "<td><a style='background-color:#3cab7b; border:none; color:#fff;' href='editar-usuario.php?id=" . $row['idUsuario'] . "' class='btn btn-info'><i class='fa-solid fa-pen-to-square'></i></a></td>";
+                        if ($row['idUsuario'] === '1') {
+                            if ($_SESSION['usuario'] === 'Admin') {
+                                echo "<td><a href='editar-usuario.php?id=" . $row['idUsuario'] . "' class='btn btn-editar'><i class='fa-solid fa-pen-to-square'></i></a></td>";
+                            }
+                            else {
+                                echo "<td><button style='background-color: gray;' class='btn btn-editar' disabled><i class='fa-solid fa-pen-to-square'></i></button></td>";
+                            }
+                        }
+                        else {
+                            echo "<td><a href='editar-usuario.php?id=" . $row['idUsuario'] . "' class='btn btn-editar'><i class='fa-solid fa-pen-to-square'></i></a></td>";
+                        }
                         echo "</tr>";
                         echo "</form>";
                     }

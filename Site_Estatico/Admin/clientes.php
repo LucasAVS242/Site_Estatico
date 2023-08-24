@@ -70,7 +70,7 @@ if ($result->num_rows > 0) {
                         echo "<td>" . $row['rua'] . "</td>";
                         echo "<td>" . $row['dataCadastro'] . "</td>";
                         echo "<td>" . $row['cadastradoPor'] . "</td>";
-                        echo "<td><a style='background-color:#3cab7b; border:none; color:#fff;' href='editar-cliente.php?id=" . $row['idCliente'] . "' class='btn btn-info'><i class='fa-solid fa-pen-to-square'></i></a></td>";
+                        echo "<td><a href='editar-cliente.php?id=" . $row['idCliente'] . "' class='btn btn-editar'><i class='fa-solid fa-pen-to-square'></i></a></td>";
                         echo "</tr>";
                         echo "</form>";
                     }

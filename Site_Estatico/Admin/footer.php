@@ -31,7 +31,7 @@
                   <p><a href="cadastrar-cliente.php">Cliente</a></p>
                 </li>
                 <li>
-                  <p><a href="cadastrar-servico.php">Serviço</a></p>
+                  <p><a href="cadastrar-servicos.php">Serviço</a></p>
                 </li>
                 
               </ul>

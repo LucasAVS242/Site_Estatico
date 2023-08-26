@@ -374,4 +374,8 @@ th {
    
   }
 
+  @media only screen and (orientation: portrait) {
+    image-resolution: 50%;
+  }
+
  

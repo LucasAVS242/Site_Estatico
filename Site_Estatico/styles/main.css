@@ -374,10 +374,11 @@ th {
    
   }
 
+  @media (max-width: 600px) {
   table {
     display: block;
     overflow-x: auto;
     white-space: nowrap;
 }
-
+  }
  

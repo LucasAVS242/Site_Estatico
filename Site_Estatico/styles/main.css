@@ -374,8 +374,10 @@ th {
    
   }
 
-  @media only screen and (orientation: portrait) {
-    image-resolution: 50%;
-  }
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+}
 
  

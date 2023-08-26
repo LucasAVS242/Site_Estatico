@@ -236,7 +236,7 @@ footer h4 {
 }
 
 img.rounded-corners {
-    border-radius: 9%;
+    border-radius: 15%;
 }
 
 #contato .container:last-child,form {

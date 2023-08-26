@@ -35,7 +35,7 @@
 
 <body>
 
-<button onclick="topFunction()" id="myBtn" title="ir para o começo">&#129093;</button>
+<button onclick="topFunction()" id="myBtn" title="ir para o começo"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
 
   <header>
     <nav class="navbar navbar-expand-lg bg-light">

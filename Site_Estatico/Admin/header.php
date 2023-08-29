@@ -37,7 +37,7 @@
 
 <button onclick="topFunction()" id="myBtn" title="ir para o começo"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
 
-  <header>
+  <header style="margin-bottom: 1%;">
     <nav class="navbar navbar-expand-lg bg-light">
       <div class="container-fluid">
         <a class="navbar-brand" href="index.php">
@@ -72,7 +72,7 @@
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Conta</a>
               <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                <li><a style="background:none;" class="dropdown-item" href="logout.php">Sair</a></li>
+                <li><a style="background:none;" class="dropdown-item" href="logout.php"><i class="fa-solid fa-right-from-bracket"></i>&nbsp;Sair</a></li>
               </ul>
             </li>
           </ul>

@@ -1,7 +1,7 @@
 
 
 <p style="padding: 10px;"></p>
-    <footer style="background-color: #3cab7b;" class="text-center text-lg-start text-white">
+    <footer style="background-color: #3cab7b; margin-top: 5%;" class="text-center text-lg-start text-white">
    
       <div class="container p-1">
        

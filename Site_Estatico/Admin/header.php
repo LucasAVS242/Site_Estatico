@@ -7,13 +7,13 @@
   <title>BVM Auditores</title>
   <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
   <!-- Link Font Awesome  -->
-  <link href="../styles/fontawesome/css/all.css" rel="stylesheet"></link>
+  <link href="../styles/fontawesome/css/all.css" rel="stylesheet">
   <!-- Link CSS Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
   <!-- Link JS Bootstrap -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="../styles/main.css" type="text/css">
+  <link rel="stylesheet" href="../styles/main.css" type="text/css">
 
   <script src="../Components/footer.js" type="text/javascript" defer></script>
   <script src="../Components/btn.js" type="text/javascript" defer></script>
@@ -24,18 +24,28 @@
     .container img {
       background-color: #eeeeee;
     }
-    a{
-      background:none;
+
+    a {
+      background: none;
     }
+
     .alert {
       text-align: center;
+    }
+
+    form {
+      text-indent: 0;
+    }
+
+    label {
+      padding-left: 2%;
     }
   </style>
 </head>
 
 <body>
 
-<button onclick="topFunction()" id="myBtn" title="ir para o começo"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
+  <button onclick="topFunction()" id="myBtn" title="ir para o começo"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
 
   <header style="margin-bottom: 1%;">
     <nav class="navbar navbar-expand-lg bg-light">

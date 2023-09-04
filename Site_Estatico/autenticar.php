@@ -1,9 +1,9 @@
-<!DOCTYPE html>
 <?php
 $conexao = mysqli_connect("localhost", "root", "");
 mysqli_select_db($conexao, "db_CadastroUsuario");
 session_start();
 ?>
+<!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
@@ -11,7 +11,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Autenticando...</title>
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-    <link href="styles/fontawesome/css/all.css" rel="stylesheet"></link>
+    <link href="styles/fontawesome/css/all.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" 
       integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/main.css" type="text/css">

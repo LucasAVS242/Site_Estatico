@@ -5,6 +5,7 @@ require_once 'header.php';
 
 <div class="container">
     <?php
+    $checkusr = "hidden";
     if (isset($_POST['addnew'])) {
 
         if (
@@ -20,14 +21,23 @@ require_once 'header.php';
             $dataCadastro = $_POST['dataCadastro'];
             $cadastradoPor = $_POST['cadastradoPor'];
 
-            $sql = "INSERT INTO tbUsuario(nomeUsuario,senha,nivelAcesso,dataCadastro,cadastradoPor)
+            // Confere se o nome de usuário já existe no banco de dados
+            $query = "SELECT nomeUsuario FROM tbUsuario WHERE nomeUsuario = '$nomeUsuario'";
+            $result = mysqli_query($con, $query);
+
+            if (mysqli_num_rows($result) > 0) {
+                $checkusr = "";
+            } else {
+
+                $sql = "INSERT INTO tbUsuario(nomeUsuario,senha,nivelAcesso,dataCadastro,cadastradoPor)
                 VALUES('$nomeUsuario','$senha','$nivelAcesso','$dataCadastro','$cadastradoPor')";
 
-            if ($con->query($sql) === TRUE) {
+                if ($con->query($sql) === TRUE) {
 
-                echo "<div class='alert alert-success'>Usuário cadastrado com sucesso</div>";
-            } else {
-                echo "<div class='alert alert-danger'>Erro: Ocorreu um erro ao cadastrar a informação do usuário</div>";
+                    echo "<div class='alert alert-success'>Usuário cadastrado com sucesso</div>";
+                } else {
+                    echo "<div class='alert alert-danger'>Erro: Ocorreu um erro ao cadastrar a informação do usuário</div>";
+                }
             }
         }
     }
@@ -40,7 +50,8 @@ require_once 'header.php';
                 <h3><i class="fa-solid fa-plus"></i>&nbsp;Cadastrar Usuário</h3>
                 <form action="" method="POST">
                     <label for="nomeUsuario">Usuário</label>
-                    <input type="username" id="nomeUsuario" name="nomeUsuario" class="form-control"><br>
+                    <input type="username" id="nomeUsuario" name="nomeUsuario" class="form-control">
+                    <label style="color: red;" for="checkusername" id="checkusername" <?php echo $checkusr ?>>Nome de usuário já existe</label><br>
 
                     <label for="senha">Senha</label>
                     <input type="password" name="senha" id="senha" class="form-control"><br>

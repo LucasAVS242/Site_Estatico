@@ -7,7 +7,15 @@ require_once 'header.php';
 
 
 <?php
-$sql = "SELECT * FROM tbUsuario";
+if (isset($_GET['page']) && is_numeric($_GET['page'])) {
+    $currentPage = intval($_GET['page']);
+} else {
+    $currentPage = 1;
+}
+
+$itemsPerPage = 10;
+$offset = ($currentPage - 1) * $itemsPerPage;
+$sql = "SELECT * FROM tbUsuario LIMIT $offset, $itemsPerPage";
 $result = $con->query($sql);
 
 if ($result->num_rows > 0) {
@@ -58,12 +66,10 @@ if ($result->num_rows > 0) {
                         if ($row['idUsuario'] === '1') {
                             if ($_SESSION['usuario'] === 'Admin') {
                                 echo "<td><a href='editar-usuario.php?id=" . $row['idUsuario'] . "' class='btn btn-editar'><i class='fa-solid fa-pen-to-square'></i></a></td>";
-                            }
-                            else {
+                            } else {
                                 echo "<td><button style='background-color: gray;' class='btn btn-editar' disabled><i class='fa-solid fa-pen-to-square'></i></button></td>";
                             }
-                        }
-                        else {
+                        } else {
                             echo "<td><a href='editar-usuario.php?id=" . $row['idUsuario'] . "' class='btn btn-editar'><i class='fa-solid fa-pen-to-square'></i></a></td>";
                         }
                         echo "</tr>";
@@ -74,6 +80,36 @@ if ($result->num_rows > 0) {
             </table>
 
         <?php
+        // Cálcula o número total de páginas
+        $sql = "SELECT COUNT(*) AS total FROM tbUsuario";
+        $result = $con->query($sql);
+        $row = $result->fetch_assoc();
+        $totalItems = $row['total'];
+        $totalPages = ceil($totalItems / $itemsPerPage);
+
+        echo  "<ul class='pagination'>";
+        // Links para a primeira página e próxima página
+        if ($currentPage > 1) {
+            echo "<li class='page-item'><a class='page-link' href='?page=1'><i class='fa-solid fa-angles-left'></i></a></li>";
+            echo "<li class='page-item'><a class='page-link' href='?page=" . ($currentPage - 1) . "'><i class='fa-solid fa-angle-left'></i></a></li>";
+        }
+
+
+        for ($i = 1; $i <= $totalPages; $i++) {
+            if ($i == $currentPage) {
+                echo "<li class='page-item'><span class='page-link active'>$i</span></li>";
+            } else {
+                echo "<li class='page-item'><a class='page-link' href='?page=$i'>$i</a></li>";
+            }
+        }
+
+        // Links para a página anterior e para a última página
+        if ($currentPage < $totalPages) {
+            echo "<li class='page-item'><a class='page-link' href='?page=" . ($currentPage + 1) . "'><i class='fa-solid fa-angle-right'></i></a></li>";
+            echo "<li class='page-item'><a class='page-link' href='?page=$totalPages'><i class='fa-solid fa-angles-right'></i></a></li>";
+        }
+        echo "</ul>";
+        
     } else {
         echo "<br><br><div class='alert alert-warning'>Nenhum registro encontrado</div>";
     }

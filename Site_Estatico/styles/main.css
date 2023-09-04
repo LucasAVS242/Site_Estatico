@@ -299,6 +299,24 @@ th {
     color: #fff;
 }
 
+.page-link {
+    background-color: #295f4e;
+    border: none;
+    text-decoration: none;
+    color: #fff !important;
+}
+
+.page-link:hover {
+    text-decoration: none;
+    background-color: #247454;
+    color: #fff;
+}
+
+.pagination .active {
+    background-color: #3cab7b;
+    color: #fff;
+}
+
 .read-only {
     color: gray !important;
 }

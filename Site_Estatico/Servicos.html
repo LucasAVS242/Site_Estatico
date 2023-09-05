@@ -21,6 +21,21 @@
 
   <script src="Components/footer.js" type="text/javascript" defer></script>
   <script src="Components/btn.js" type="text/javascript" defer></script>
+  <script>function mais() {
+    var dots = document.getElementById("dots");
+    var moreText = document.getElementById("more");
+    var btnText = document.getElementById("mais");
+  
+    if (dots.style.display === "none") {
+      dots.style.display = "inline";
+      btnText.innerHTML = "Read more"; 
+      moreText.style.display = "none";
+    } else {
+      dots.style.display = "none";
+      btnText.innerHTML = "Read less"; 
+      moreText.style.display = "inline";
+    }
+  }</script>
 
   <style>
     main {
@@ -74,6 +89,7 @@
       border-radius: 35px;
       color: #fff;
     }
+    #more {display: none;}
   </style>
 </head>
 
@@ -168,11 +184,14 @@
           e entradas, informando sobre os direitos de créditos, melhorando na organização dos papéis, enfim, aumentando
           a qualidade dos documentos fiscais. Dessa forma, diminuímos a fragilidade da empresa diante de uma possível
           fiscalização estadual que sempre é precedida de muito nervosismo.</p>
-        <p>Além de trabalhar com os documentos fiscais, informamos os parceiros das necessidades de utilização dos
+        <p><span id="dots">...</span><span id="more">Além de trabalhar com os documentos fiscais, informamos os parceiros das necessidades de utilização dos
           livros de estoque e Modelo 3 do Controle da Produção, muito utilizados na fiscalização para apuração de
           estoques descobertos e outros erros. Contamos com as informações precisas do Mapa Fiscal, Consultoria
           Eletrônica e Pessoal da IOB, temos a TIPI e o Regulamento do IPI, também o Regulamento do ICMS da empresa
-          UTILITAS, com consultoria e leis, via internet.</p>
+          UTILITAS, com consultoria e leis, via internet.</span></p>
+          <button onclick="mais()" id="mais">Read more</button>
+   
+        
       </section>
 
       <section> <a id="pessoal"></a>

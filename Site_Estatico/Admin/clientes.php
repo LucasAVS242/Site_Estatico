@@ -97,8 +97,8 @@ if ($result->num_rows > 0) {
         echo  "<ul class='pagination'>";
         // Links para a primeira página e próxima página
         if ($currentPage > 1) {
-            echo "<li class='page-item'><a class='page-link' href='?page=1'><i class='fa-solid fa-angles-left'></i></a></li>";
-            echo "<li class='page-item'><a class='page-link' href='?page=" . ($currentPage - 1) . "'><i class='fa-solid fa-angle-left'></i></a></li>";
+            echo "<li class='page-item' title='Primeira página'><a class='page-link' href='?page=1'><i class='fa-solid fa-angles-left'></i></a></li>";
+            echo "<li class='page-item' title='Página anterior'><a class='page-link' href='?page=" . ($currentPage - 1) . "'><i class='fa-solid fa-angle-left'></i></a></li>";
         }
 
 
@@ -112,8 +112,8 @@ if ($result->num_rows > 0) {
 
         // Links para a página anterior e para a última página
         if ($currentPage < $totalPages) {
-            echo "<li class='page-item'><a class='page-link' href='?page=" . ($currentPage + 1) . "'><i class='fa-solid fa-angle-right'></i></a></li>";
-            echo "<li class='page-item'><a class='page-link' href='?page=$totalPages'><i class='fa-solid fa-angles-right'></i></a></li>";
+            echo "<li class='page-item' title='Próxima página'><a class='page-link' href='?page=" . ($currentPage + 1) . "'><i class='fa-solid fa-angle-right'></i></a></li>";
+            echo "<li class='page-item' title='Última página'><a class='page-link' href='?page=$totalPages'><i class='fa-solid fa-angles-right'></i></a></li>";
         }
         echo "</ul>";
 
